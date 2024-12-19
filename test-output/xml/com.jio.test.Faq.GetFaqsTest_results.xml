@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/fazil.shaik/IdeaProjects/hrmsApiAutomation/src/test/java/com/jio/test/Faq"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.530">
+  <properties />
+  
+  
+            <testcase name="getFaqWithValidDetails" time="0.131" classname="com.jio.test.Faq.GetFaqsTest" />
+                <testcase name="getFaqSecondaryPageDetails" time="0.153" classname="com.jio.test.Faq.GetFaqsTest" />
+                <testcase name="getFaqWithinValidOffsetValue" time="0.129" classname="com.jio.test.Faq.GetFaqsTest" />
+                <testcase name="getFaqWithinValidPageDetails" time="0.117" classname="com.jio.test.Faq.GetFaqsTest" />
+      
+</testsuite>

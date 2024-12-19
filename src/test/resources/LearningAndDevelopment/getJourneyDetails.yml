@@ -1,0 +1,8 @@
+testDataMap:
+  getJourneyDetails:
+    urls:
+      GetJourneyDetailsEndpoint: /microsite/lnd/journeys/details/3
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200

@@ -1,0 +1,8 @@
+testDataMap:
+  getDepartment:
+    urls:
+      getDepartmentEndpoint: /microsite/download-center/new-employees/departments
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200

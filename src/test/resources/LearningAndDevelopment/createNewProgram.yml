@@ -1,0 +1,18 @@
+testDataMap:
+  createNewProgram:
+    urls:
+      createNewProgramEndpoint: /microsite/lnd/programs/new
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      thumbnailId: ''
+      title: ProgramTestAutomation
+      description: ProgramDescriptionTesting
+      flow: SEQUENCE
+      issueCertificate: false
+      course: 2
+      courseName: Java
+      coursePosition: 1
+      roleId: 1
+      skillId: 1

@@ -1,0 +1,8 @@
+testDataMap:
+  getCategories:
+    urls:
+      getFaqCategoriesEndpoint: /microsite/faq
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200

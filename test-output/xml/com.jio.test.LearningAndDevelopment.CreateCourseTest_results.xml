@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LearningAndDevelopment"
+           tests="10"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.798">
+  <properties />
+  
+  
+            <testcase name="createCourseWithInvalidProgramId" time="0.136" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutRruCourseId" time="0.120" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithValidDetails" time="0.702" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutCourseCoins" time="0.125" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutRruDeeplink" time="0.108" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutTitle" time="0.133" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutDescription" time="0.118" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutDuration" time="0.124" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutMinCourseCoin" time="0.110" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+                <testcase name="createCourseWithoutCarrierCoin" time="0.122" classname="com.jio.test.LearningAndDevelopment.CreateCourseTest" />
+      
+</testsuite>

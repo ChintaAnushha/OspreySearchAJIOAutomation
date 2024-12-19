@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LearningAndDevelopment"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="1.563">
+  <properties />
+  
+  
+            <testcase name="createNewProgramWithValidDetails" time="0.716" classname="com.jio.test.LearningAndDevelopment.CreateNewProgramTest" />
+                <testcase name="createNewProgramWithoutSkillId" time="0.143" classname="com.jio.test.LearningAndDevelopment.CreateNewProgramTest" />
+                <testcase name="createNewProgramWithoutRoleId" time="0.146" classname="com.jio.test.LearningAndDevelopment.CreateNewProgramTest" />
+                <testcase name="createNewProgramWithoutDescriptionField" time="0.132" classname="com.jio.test.LearningAndDevelopment.CreateNewProgramTest" />
+                <testcase name="createNewProgramWithoutCourse" time="0.139" classname="com.jio.test.LearningAndDevelopment.CreateNewProgramTest" />
+                <testcase name="createNewProgramWithoutProgramTitle" time="0.146" classname="com.jio.test.LearningAndDevelopment.CreateNewProgramTest" />
+                <testcase name="createNewProgramWitNonSequential" time="0.141" classname="com.jio.test.LearningAndDevelopment.CreateNewProgramTest" />
+      
+</testsuite>

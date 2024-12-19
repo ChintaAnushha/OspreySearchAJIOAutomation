@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LearningAndDevelopment"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.257">
+  <properties />
+  
+  
+            <testcase name="setWelcomeMessageWithValidDetails" time="0.134" classname="com.jio.test.LearningAndDevelopment.SetWelcomeMessageTest" />
+                <testcase name="setWelcomeMessageWithInvalidFile" time="0.123" classname="com.jio.test.LearningAndDevelopment.SetWelcomeMessageTest" />
+      
+</testsuite>

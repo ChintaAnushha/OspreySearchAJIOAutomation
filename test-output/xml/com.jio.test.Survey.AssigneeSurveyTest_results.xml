@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/fazil.shaik/IdeaProjects/hrmsApiAutomation/src/test/java/com/jio/test/Survey"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.690">
+  <properties />
+  
+  
+            <testcase name="assignSurveyWithinValidAssigneeId" time="0.128" classname="com.jio.test.Survey.AssigneeSurveyTest" />
+                <testcase name="assignSurveyWithinValidExpireDate" time="0.143" classname="com.jio.test.Survey.AssigneeSurveyTest" />
+                <testcase name="assignSurveyApiWithValidDetails" time="0.267" classname="com.jio.test.Survey.AssigneeSurveyTest" />
+                <testcase name="assignSurveyWithinValidSurveyId" time="0.152" classname="com.jio.test.Survey.AssigneeSurveyTest" />
+      
+</testsuite>

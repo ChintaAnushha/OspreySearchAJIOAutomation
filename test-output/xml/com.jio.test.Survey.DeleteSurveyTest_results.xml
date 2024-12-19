@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/fazil.shaik/IdeaProjects/hrmsApiAutomation/src/test/java/com/jio/test/Survey"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.258">
+  <properties />
+  
+  
+            <testcase name="deleteSurveyApiWithValidDetails" time="0.258" classname="com.jio.test.Survey.DeleteSurveyTest" />
+      
+</testsuite>

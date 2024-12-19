@@ -1,0 +1,9 @@
+testDataMap:
+  setWelcomeMessage:
+    urls:
+      setWelcomeMessageEndpoint: /microsite/lnd/user-welcome-message/file-url
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      fileUrl: https://www.youtube.com/watch?v=61QSHrOuGEA

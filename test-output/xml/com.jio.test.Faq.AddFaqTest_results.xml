@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/fazil.shaik/IdeaProjects/hrmsApiAutomation/src/test/java/com/jio/test/Faq"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.616">
+  <properties />
+  
+  
+            <testcase name="addFaqWithInvalidCategory" time="0.115" classname="com.jio.test.Faq.AddFaqTest" />
+                <testcase name="addFaqWithoutQuestion" time="0.120" classname="com.jio.test.Faq.AddFaqTest" />
+                <testcase name="addFaqWithoutAnswer" time="0.141" classname="com.jio.test.Faq.AddFaqTest" />
+                <testcase name="addFaqServiceWithValidDetails" time="0.240" classname="com.jio.test.Faq.AddFaqTest" />
+      
+</testsuite>

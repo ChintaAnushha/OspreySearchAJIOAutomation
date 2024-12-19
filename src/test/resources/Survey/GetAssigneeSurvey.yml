@@ -1,0 +1,9 @@
+testDataMap:
+  getAssigneeSurvey:
+    urls:
+      getAssignSurveyEndpoint: /microsite/assignee
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      completed: false

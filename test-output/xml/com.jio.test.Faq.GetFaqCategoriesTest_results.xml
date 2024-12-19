@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/fazil.shaik/IdeaProjects/hrmsApiAutomation/src/test/java/com/jio/test/Faq"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.120">
+  <properties />
+  
+  
+            <testcase name="getFaqCategoriesWithValidDetails" time="0.120" classname="com.jio.test.Faq.GetFaqCategoriesTest" />
+      
+</testsuite>

@@ -1,0 +1,11 @@
+testDataMap:
+  editCarousel:
+    urls:
+      editCarouselEndpoint: /microsite/lnd/hero/carousel-data
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      positionValue: 1
+      courseHyperlink: 2
+      imageDocumentId: 114

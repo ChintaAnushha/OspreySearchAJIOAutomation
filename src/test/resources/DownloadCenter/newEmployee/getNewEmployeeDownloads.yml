@@ -1,0 +1,10 @@
+testDataMap:
+  getNewEmployeeDownloads:
+    urls:
+      getNewEmployeeDownloadsEndpoint: /microsite/download-center/new-employees
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      offset: 0
+      pageSize: 7

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LearningAndDevelopment"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.121">
+  <properties />
+  
+  
+            <testcase name="createNewJourneyWithValidDetails" time="0.121" classname="com.jio.test.LearningAndDevelopment.CreateNewJourneyTest" />
+      
+</testsuite>

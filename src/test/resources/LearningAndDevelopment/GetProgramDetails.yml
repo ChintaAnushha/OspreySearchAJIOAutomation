@@ -1,0 +1,8 @@
+testDataMap:
+  getProgramDetails:
+    urls:
+      getProgramEndpoint: /microsite/lnd/programs/details/Program_Id
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200

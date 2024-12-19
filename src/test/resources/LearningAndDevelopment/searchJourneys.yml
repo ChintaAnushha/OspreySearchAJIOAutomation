@@ -1,0 +1,10 @@
+testDataMap:
+  searchJourneys:
+    urls:
+      GetSearchJourneysEndpoint: /microsite/lnd/journeys/search
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      page: 0
+      size: 8

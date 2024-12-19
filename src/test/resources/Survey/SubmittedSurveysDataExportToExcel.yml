@@ -1,0 +1,9 @@
+testDataMap:
+  SubmittedSurveyDataExportToExcel:
+    urls:
+      SubmittedSurveyDataExportToExcelEndpoint: /microsite/surveys/export-to-excel
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      completed: false

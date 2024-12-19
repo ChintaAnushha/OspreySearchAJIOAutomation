@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LearningAndDevelopment"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.489">
+  <properties />
+  
+  
+            <testcase name="createRoleTagWithValidDetails" time="0.112" classname="com.jio.test.LearningAndDevelopment.CreateTagTest" />
+                <testcase name="createSkillTagWithValidDetails" time="0.119" classname="com.jio.test.LearningAndDevelopment.CreateTagTest" />
+                <testcase name="createTagWithoutName" time="0.143" classname="com.jio.test.LearningAndDevelopment.CreateTagTest" />
+                <testcase name="createTagWithEmptyTypeValue" time="0.115" classname="com.jio.test.LearningAndDevelopment.CreateTagTest" />
+      
+</testsuite>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="/Users/fazil.shaik/IdeaProjects/hrmsApiAutomation/src/test/java/com/jio/test/Survey"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.549">
+  <properties />
+  
+  
+            <testcase name="createSurveyTestWithValidDetails" time="0.162" classname="com.jio.test.Survey.CreateSurveyTest" />
+                <testcase name="createSurveyWithoutSurveyTitle" time="0.106" classname="com.jio.test.Survey.CreateSurveyTest" />
+                <testcase name="createSurveyWithoutDescription" time="0.137" classname="com.jio.test.Survey.CreateSurveyTest" />
+                <testcase name="createSurveyWithoutDocumentId" time="0.144" classname="com.jio.test.Survey.CreateSurveyTest" />
+      
+</testsuite>

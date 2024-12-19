@@ -1,0 +1,8 @@
+testDataMap:
+  getActiveWelcomeMessage:
+    urls:
+      getActiveWelcomeMessageEndpoint: /microsite/lnd/user-welcome-message/active
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200

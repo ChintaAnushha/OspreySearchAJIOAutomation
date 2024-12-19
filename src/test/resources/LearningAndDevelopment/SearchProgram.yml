@@ -1,0 +1,11 @@
+testDataMap:
+  searchProgram:
+    urls:
+      searchProgramEndpoint: /microsite/lnd/programs/search
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      key: Automation
+      page: 0
+      size: 8

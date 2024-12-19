@@ -1,0 +1,10 @@
+testDataMap:
+  getFaq:
+    urls:
+      getFaqEndpoint: /microsite/faq/category/1
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      offset: 1
+      pageSize: 3

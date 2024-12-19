@@ -1,0 +1,11 @@
+testDataMap:
+  ospreySearch:
+    urls:
+      ospreySearchEndpoint: /couturesearch/v1/products/search
+    headersMap:
+      Content-Type: application/json
+      accept: application/json
+    otherParams:
+      expectedStatusCode: 200
+      query: shirts
+      store: rilfnl

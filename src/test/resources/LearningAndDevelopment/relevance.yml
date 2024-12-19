@@ -1,0 +1,8 @@
+testDataMap:
+  getHomeEvents:
+    urls:
+      getHomeEventsEndpoint: /microsite/lnd/home/events
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200

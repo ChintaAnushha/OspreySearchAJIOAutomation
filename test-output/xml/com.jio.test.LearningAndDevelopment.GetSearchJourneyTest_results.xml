@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LearningAndDevelopment"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.234">
+  <properties />
+  
+  
+            <testcase name="searchInvalidJourney" time="0.115" classname="com.jio.test.LearningAndDevelopment.GetSearchJourneyTest" />
+                <testcase name="getSearchJourneyWithValidDetails" time="0.119" classname="com.jio.test.LearningAndDevelopment.GetSearchJourneyTest" />
+      
+</testsuite>

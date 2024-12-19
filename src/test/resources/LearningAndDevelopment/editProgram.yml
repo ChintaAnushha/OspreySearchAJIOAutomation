@@ -1,0 +1,15 @@
+testDataMap:
+  editProgram:
+    urls:
+      editProgramEndpoint: /microsite/lnd/programs/edit/PROGRAM_ID
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      title: ProgramTestAutomation
+      description: ProgramDescriptionTesting
+      flow: SEQUENCE
+      issueCertificate: false
+      course: 2
+      courseName: Java
+      coursePosition: 1

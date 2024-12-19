@@ -1,0 +1,119 @@
+package Com.jio.util;
+
+public class MicrositeYamlPathConstants {
+
+//  ######################### Survey ###########################
+
+    public static final String GET_ALL_SURVEY_FILEPATH = "src/test/resources/Survey/SurveyConfigFile.yml";
+    public static final String GET_ALL_SURVEY_DATAKEY = "getBrandConfig";
+    public static final String CREATE_SURVEY_FILEPATH = "src/test/resources/Survey/CreateSurvey.yml";
+    public static final String CREATE_SURVEY_DATAKEY = "createSurvey";
+
+    public static final String UPDATE_SURVEY_FILEPATH = "src/test/resources/Survey/UpdateSurvey.yml";
+    public static final String UPDATE_SURVEY_DATAKEY = "updateSurvey";
+
+    public static final String DELETE_SURVEY_FILEPATH = "src/test/resources/Survey/deleteSurvey.yml";
+    public static final String DELETE_SURVEY_DATAKEY = "deleteSurvey";
+
+    public static final String ASSIGN_SURVEY_FILEPATH = "src/test/resources/Survey/AssignSurvey.yml";
+    public static final String ASSIGN_SURVEY_DATAKEY = "assignSurvey";
+
+    public static final String ASSIGN_SURVEY_RESPONSE_FILEPATH = "src/test/resources/Survey/GetAssigneeSurveyResponse.yml";
+    public static final String ASSIGN_SURVEY_RESPONSE_DATAKEY = "getAssigneeSurveyResponse";
+
+    public static final String GET_SURVEY_DASHBOARD_DATA_FILEPATH = "src/test/resources/Survey/getSurveyDashboardData.yml";
+    public static final String GET_SURVEY_DASHBOARD_DATA_DATAKEY = "getDashboardData";
+
+    public static final String  GET_SURVEY_SUBMITTED_COUNT_FILEPATH= "src/test/resources/Survey/GetSurveySubmittedCountTest.yml";
+    public static final String  GET_SURVEY_SUBMITTED_COUNT_DATAKEY= "getSurveySubmittedCount";
+
+    public static final String  SURVEY_DATA_EXPORT_TO_EXCEL_FILEPATH= "src/test/resources/Survey/SubmittedSurveysDataExportToExcel.yml";
+    public static final String  SURVEY_DATA_EXPORT_TO_EXCEL_DATAKEY= "SubmittedSurveyDataExportToExcel";
+
+
+    //  ######################### FAQ ###########################
+    public static final String ADD_FAQ_FILEPATH = "src/test/resources/Faq/addFaq.yml";
+    public static final String ADD_FAQ_DATAKEY = "addFaq";
+    public static final String FAQ_GET_CATEGORIES_FILEPATH = "src/test/resources/Faq/getCategories.yml";
+    public static final String FAQ_GET_CATEGORIES_DATAKEY = "getCategories";
+
+    public static final String GET_FAQ_FILEPATH = "src/test/resources/Faq/getFaq.yml";
+    public static final String GET_FAQ_DATAKEY = "getFaq";
+
+    public static final String DELETE_FAQ_FILEPATH = "src/test/resources/Faq/deleteQnA.yml";
+    public static final String DELETE_FAQ_DATAKEY = "deleteFaq";
+
+
+//  ########################## Learning and Development #################################
+
+    public static final String GET_INDUCTION_JOURNEY_FILEPATH = "src/test/resources/LearningAndDevelopment/InductionJourney.yml";
+    public static final String GET_INDUCTION_JOURNEY_DATAKEY = "inductionJourney";
+
+    public static final String GET_JOURNEY_DETAILS_FILEPATH = "src/test/resources/LearningAndDevelopment/getJourneyDetails.yml";
+    public static final String GET_JOURNEY_DETAILS_DATAKEY = "getJourneyDetails";
+
+    public static final String SEARCH_JOURNEY_DETAILS_FILEPATH = "src/test/resources/LearningAndDevelopment/searchJourneys.yml";
+    public static final String SEARCH_JOURNEY_DETAILS_DATAKEY = "searchJourneys";
+
+    public static final String SET_WELCOME_MESSAGE_FILEPATH = "src/test/resources/LearningAndDevelopment/SetWelcomeMessage.yml";
+    public static final String SET_WELCOME_MESSAGE_DATAKEY = "setWelcomeMessage";
+
+    public static final String GET_ACTIVE_WELCOME_MESSAGE_FILEPATH = "src/test/resources/LearningAndDevelopment/getActiveWelcomeMessage.yml";
+    public static final String GET_ACTIVE_WELCOME_MESSAGE_DATAKEY = "getActiveWelcomeMessage";
+
+    public static final String CREATE_NEW_JOURNEY_FILEPATH = "src/test/resources/LearningAndDevelopment/createJourney.yml";
+    public static final String CREATE_NEW_JOURNEY_DATAKEY = "createJourney";
+
+    public static final String EDIT_NEW_JOURNEY_FILEPATH = "src/test/resources/LearningAndDevelopment/editJourney.yml";
+    public static final String EDIT_NEW_JOURNEY_DATAKEY = "editJourney";
+
+    public static final String CREATE_NEW_PROGRAM_FILEPATH = "src/test/resources/LearningAndDevelopment/createNewProgram.yml";
+    public static final String CREATE_NEW_PROGRAM_DATAKEY = "createNewProgram";
+
+    public static final String EDIT_NEW_PROGRAM_FILEPATH = "src/test/resources/LearningAndDevelopment/editProgram.yml";
+    public static final String EDIT_NEW_PROGRAM_DATAKEY = "editProgram";
+
+    public static final String GET_PROGRAM_DETAILS_FILEPATH = "src/test/resources/LearningAndDevelopment/GetProgramDetails.yml";
+    public static final String GET_PROGRAM_DETAILS_DATAKEY = "getProgramDetails";
+
+    public static final String SEARCH_PROGRAMS_FILEPATH = "src/test/resources/LearningAndDevelopment/SearchProgram.yml";
+    public static final String SEARCH_PROGRAMS_DATAKEY = "searchProgram";
+
+    public static final String GET_CURRENT_PROGRAMS_FILEPATH = "src/test/resources/LearningAndDevelopment/CurrentPrograms.yml";
+    public static final String GET_CURRENT_PROGRAMS_DATAKEY = "currentPrograms";
+
+    public static final String GET_CAROUSEL_DATA_FILEPATH = "src/test/resources/LearningAndDevelopment/getCarouselData.yml";
+    public static final String GET_CAROUSEL_DATA_DATAKEY = "getCarouselData";
+
+    public static final String EDIT_CAROUSEL_DATA_FILEPATH = "src/test/resources/LearningAndDevelopment/EditCarouselData.yml";
+    public static final String EDIT_CAROUSEL_DATA_DATAKEY = "editCarousel";
+
+    public static final String SEARCH_COURSE_FILEPATH = "src/test/resources/LearningAndDevelopment/searchCourse.yml";
+    public static final String SEARCH_COURSE_DATAKEY = "searchCourse";
+
+    public static final String CREATE_COURSE_FILEPATH = "src/test/resources/LearningAndDevelopment/createCourse.yml";
+    public static final String CREATE_COURSE_DATAKEY = "createCourse";
+
+    public static final String CREATE_TAG_FILEPATH = "src/test/resources/LearningAndDevelopment/createTag.yml";
+    public static final String CREATE_TAG_DATAKEY = "createTag";
+
+    public static final String RELEVANCE_API_FILEPATH = "src/test/resources/LearningAndDevelopment/relevance.yml";
+    public static final String RELEVANCE_API_DATAKEY = "getHomeEvents";
+
+    //  ########################## Download Center #################################
+
+    public static final String GET_DEPARTMENTS_FILEPATH = "src/test/resources/DownloadCenter/newEmployee/getDepartments.yml";
+    public static final String GET_DEPARTMENTS_DATAKEY = "getDepartment";
+
+    public static final String GET_NEW_EMPLOYEE_DOWNLOADS_FILEPATH = "src/test/resources/DownloadCenter/newEmployee/getNewEmployeeDownloads.yml";
+    public static final String GET_NEW_EMPLOYEE_DOWNLOADS_DATAKEY = "getNewEmployeeDownloads";
+
+
+    public static final String SEARCH_NEW_EMPLOYEE_DOWNLOADS_FILEPATH = "src/test/resources/DownloadCenter/newEmployee/searchNewEmployeeDownloads.yml";
+    public static final String SEARCH_NEW_EMPLOYEE_DOWNLOADS_DATAKEY = "searchNewEmployeeDownloads";
+
+    public  static final String SEARCH_KEYWORDS_FILEPATH = "src/test/resources/SearchKeywords/Keywordssearch.yml";
+    public  static final String SEARCH_KEYWORDS_DATAKEY = "ospreySearch";
+
+
+}

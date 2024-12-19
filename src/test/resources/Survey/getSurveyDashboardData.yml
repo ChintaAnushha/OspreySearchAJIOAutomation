@@ -1,0 +1,10 @@
+testDataMap:
+  getDashboardData:
+    urls:
+      getSurveyDashboardDataEndpoint: /microsite/surveys/dash-board/SurveyID
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      pageNumber: 0
+      completed: false
