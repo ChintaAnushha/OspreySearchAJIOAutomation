@@ -102,8 +102,8 @@ public class MicrositeYamlPathConstants {
 
     //  ########################## Download Center #################################
 
-    public static final String GET_DEPARTMENTS_FILEPATH = "src/test/resources/DownloadCenter/newEmployee/getDepartments.yml";
-    public static final String GET_DEPARTMENTS_DATAKEY = "getDepartment";
+//    public static final String GET_DEPARTMENTS_FILEPATH = "src/test/resources/DownloadCenter/newEmployee/getDepartments.yml";
+//    public static final String GET_DEPARTMENTS_DATAKEY = "getDepartment";
 
     public static final String GET_NEW_EMPLOYEE_DOWNLOADS_FILEPATH = "src/test/resources/DownloadCenter/newEmployee/getNewEmployeeDownloads.yml";
     public static final String GET_NEW_EMPLOYEE_DOWNLOADS_DATAKEY = "getNewEmployeeDownloads";
