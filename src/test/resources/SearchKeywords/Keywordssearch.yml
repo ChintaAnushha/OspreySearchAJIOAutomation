@@ -1,11 +1,276 @@
 testDataMap:
-  ospreySearch:
-    urls:
-      ospreySearchEndpoint: /couturesearch/v1/products/search
-    headersMap:
-      Content-Type: application/json
-      accept: application/json
-    otherParams:
-      expectedStatusCode: 200
-      query: shirts
-      store: rilfnl
+    ospreySearch:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: shirts
+        store: rilfnl
+        records_per_page: 12
+        sort_field: relevance
+    productSearchValidQuery:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: jeans
+        store: rilfnl
+        records_per_page: 12
+        sort_field: relevance
+        page_number: 1
+    productSearchInvalidQuery:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: 34j@sdg
+        store: rilfnl
+        records_per_page: 12
+        sort_field: relevance
+        page_number: 1
+    productSearchEmptyQuery:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query:
+        store: rilfnl
+        records_per_page: 12
+        sort_field: relevance
+    productSearchInvalidStore:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: Jeans
+        store: rilfn
+        records_per_page: 12
+        sort_field: relevance
+    productSearchNoStore:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: Jeans
+        records_per_page: 12
+        sort_field: relevance
+    searchWithPriceAsc:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: jeans
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: price
+        sort_order: asc
+        page_number: 1
+    searchWithPriceDesc:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: tops
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: price
+        sort_order: desc
+        page_number: 1
+    facetDataVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: tops
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: relevance
+        page_number: 1
+        disable_facets: true
+    facetDataEnableVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: tops
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: relevance
+        page_number: 1
+        disable_facets: false
+    facetDataCountDisable:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: jeans
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: relevance
+        page_number: 1
+        enable_facet_values_count: false
+    facetDataCountEnable:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: shirts
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: relevance
+        page_number: 1
+        enable_facet_values_count: true
+    productSearchWithAttributes:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: shirts
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: relevance
+        page_number: 1
+        attributes_to_retrieve: name_text_en
+    storeRedirectSearch:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: Calvin Klein men’s watches
+        store: rilfnl
+        records_per_page: 10000
+        sort_field: relevance
+        page_number: 1
+    exceptQueryNoOtherAttribute:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: Jeans
+#        store: rilfnl
+#        records_per_page: 10000
+#        sort_field: relevance
+#        page_number: 1
+    paginationVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: Jeans
+        store: rilfnl
+        records_per_page: 10
+        sort_field: relevance
+        page_number: 2
+    invalidPageNumber:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: jeans for women
+        store: rilfnl
+        page_number: gap
+        records_per_page: 840
+        sort_field: relevance
+    invalidRecordsOffset:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: jeans for women
+        store: rilfnl
+        page_number: 1
+        records_per_page: 840
+        sort_field: relevance
+        records_offset: "no"
+    recordsOffsetVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: jeans for women
+        store: rilfnl
+        page_number: 1
+        records_per_page: 12
+        sort_field: relevance
+        records_offset: 5
+    recordsPerPageVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 200
+        query: jeans for women
+        store: rilfnl
+        page_number: 1
+        records_per_page: 10
+        sort_field: relevance
+
+
+
+
+
+
+
+
+
+
+

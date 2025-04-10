@@ -1,0 +1,14 @@
+Overall Status: ✅ INVALID PAGE NUMBER ERROR VALIDATED - PASSED
+
+Error Details:
+-------------
+Expected Error: {"detail": "page_number must be an integer"}
+Actual Error: {"detail": "page_number must be an integer"}
+
+Detailed Analysis:
+-----------------
+Error Validation:
+-----------------
+Error Message Match: ✓
+Expected: {"detail": "page_number must be an integer"}
+Actual: {"detail": "page_number must be an integer"}

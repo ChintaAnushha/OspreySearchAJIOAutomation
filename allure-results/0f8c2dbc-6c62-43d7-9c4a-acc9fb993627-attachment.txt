@@ -1,0 +1,24 @@
+Test Summary:
+-------------
+Expected Size: S
+Total Products: 3
+Matching Products: 3
+
+Count Validation:
+----------------
+Exact Match Status: PASSED
+NumFound: 3
+Facet Count: 3
+Docs Count: 3
+Counts Match Status: MATCHED
+Docs Match Status: VALID
+
+Filter Statistics:
+----------------
+Match Percentage: 100.00%
+
+Validation:
+----------
+Filter Compliance: PASSED
+Validation Message: All products match the specified size filter
+Pagination Note: Note: If pagination is enabled, docs count might be less than total records

@@ -1,0 +1,65 @@
+Overall Status: ✅ ALL LISTS EMPTY - PASSED
+
+Summary Statistics:
+------------------
+Total Facets: 10
+Empty Lists: 10
+Non-Empty Lists: 0
+Empty Percentage: 100.00%
+
+Non-Empty Facets:
+----------------
+None
+
+Detailed Analysis:
+-----------------
+Facet: brand_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: discount_string
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: genderfilter_en_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: occasion_en_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: pricerange_inr_string
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: rating_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: tags_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Status: ✓ EMPTY
+List Size: 0
+Validation: PASSED
+------------------------

@@ -21,3 +21,4 @@ public class Choices {
     @JsonProperty("choiceText1")
     public String choiceText1;
 }
+

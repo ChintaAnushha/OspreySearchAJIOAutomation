@@ -1,0 +1,16 @@
+Overall Status: ✅ RECORDS OFFSET VALIDATED - PASSED
+
+Summary:
+--------
+Total Results: 349
+Offset: 5
+Documents Returned: 12
+
+Detailed Analysis:
+-----------------
+Offset Validation:
+-----------------
+Starting from document: 6
+First Document Details:
+Name: City button on seam pants, black, m
+Code: 441220739009

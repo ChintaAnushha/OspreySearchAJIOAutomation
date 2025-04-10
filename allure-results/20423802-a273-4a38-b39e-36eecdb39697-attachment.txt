@@ -1,0 +1,21 @@
+Test Summary:
+-------------
+Discount Range: 21.00% - 30.00%
+Total Products: 11
+Products in Range: 11
+
+Count Validation:
+----------------
+Products Match Status: MATCHED
+NumFound: 11
+Facet Count: 11
+Docs Count: 11
+Overall Status: PASSED
+
+Discount Statistics:
+-------------------
+Minimum Discount: 21.00%
+Maximum Discount: 25.00%
+Average Discount: 21.45%
+
+Validation Message: All validations passed successfully

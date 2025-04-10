@@ -1,0 +1,19 @@
+Test Summary:
+-------------
+Sort Field: price
+Sort Order: asc
+Total Products: 98
+
+Price Range (INR):
+------------
+First Product: 426.00
+Last Product: 56322.00
+
+Price Statistics:
+---------------
+Minimum Price: 426.00
+Maximum Price: 56322.00
+
+Validation:
+----------
+Sorting Status: PASSED

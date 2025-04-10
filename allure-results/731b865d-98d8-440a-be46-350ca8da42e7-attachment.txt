@@ -1,0 +1,8 @@
+Overall Status: ✅ INVALID RECORDS OFFSET VALIDATED - PASSED
+
+Test Details:
+-------------
+Input Value: no
+Input Type: String
+Actual Error: {"detail": "records_offset must be an integer"}
+Validation Result: PASSED

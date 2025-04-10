@@ -1,0 +1,54 @@
+Test Summary:
+-------------
+Color Filter: red
+Store: rilfnl
+Page Number: 1
+
+Count Validation:
+----------------
+NumFound Count: 6
+Docs Count: 6
+Matching Products: 6
+Facet Count: 6
+
+Validation Status:
+----------------
+All Counts Match: PASSED
+Products Match Filter: PASSED
+Facet Count Match: PASSED
+Docs Count Match: PASSED
+
+Validation Details:
+-----------------
+Expected Color: red
+Total Products Found: 6
+Products with Color: 6
+Products without Color: 0
+Match Percentage: 100.00%
+
+Product Analysis:
+----------------
+Product: Checks Regular Fit Shirt
+Colors: 441122132_red
+Matches Filter: Yes
+---
+Product: Cartoon Regular Fit Shirt
+Colors: 460416548_red
+Matches Filter: Yes
+---
+Product: Animal Regular Fit Shirt
+Colors: 460416483_red
+Matches Filter: Yes
+---
+Product: Camouflage  Shirt
+Colors: 460421143_red
+Matches Filter: Yes
+---
+Product: Camouflage Slim Fit Shirt
+Colors: 460421116_red
+Matches Filter: Yes
+---
+Product: Camouflage Slim Fit Shirt
+Colors: 460421019_red
+Matches Filter: Yes
+---

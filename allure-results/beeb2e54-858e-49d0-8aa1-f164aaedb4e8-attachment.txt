@@ -1,0 +1,1 @@
+{"detail": [{"type": "missing", "loc": ["body", "store"], "msg": "Field required", "input": {"query": "Jeans", "sort_field": "relevance", "records_per_page": 2}}]}

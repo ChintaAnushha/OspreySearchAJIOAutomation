@@ -4,16 +4,22 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class  OspreyApiResponse{
+public class  OspreyApiResponse {
+
+   // private ObjectMapper objectMapper = new ObjectMapper();
 
     @JsonProperty("numFound")
     public int numFound;
@@ -22,11 +28,51 @@ public class  OspreyApiResponse{
     public Object storeRedirect; // Can be null, so Object is used.
 
     @JsonProperty("docs")
-    public List<Doc> docs = null;
+    public List<Doc> docs;
 
+    @JsonProperty("detail")
+    public Object detail;
 
     @JsonProperty("facetData")
-    public FacetData facetData;
+    public Map<String, List<Map<String, Object>>> facetData;
+  //  public static Map<String, List<FacetItem>> facetData;
+   // public FacetData facetData;
+
+    public Map<String, List<Map<String, Object>>> getFacetData() {
+        return facetData;
+    }
+
+    public void setFacetData(Map<String, List<Map<String, Object>>> facetData) {
+        this.facetData = facetData;
+    }
+
+    public Map<String, Object> getFacetField(String fieldName) {
+        if (facetData != null && facetData.get("") != null) {
+            return facetData.get("facet_fields").get(Integer.parseInt(fieldName));
+        }
+        return null;
+    }
+
+    public String getDetail() {
+        return null;
+    }
+
+
+
+    public String getErrorMessage() {
+        if (detail == null) {
+            return null;
+        }
+        return "{\"detail\": \"" + detail + "\"}";
+    }
+
+    public void setDetail(Object detail) {
+        this.detail = detail;
+    }
+
+    //  public Map<String, List<FacetItem>> getFacetData() { return facetData; }
+  //  public void setFacetData(Map<String, List<FacetItem>> facetData) { this.facetData = facetData; }
+
 
     @Getter
     @Setter
@@ -49,6 +95,9 @@ public class  OspreyApiResponse{
         @JsonProperty("code_string")
         public String codeString;
 
+        @JsonProperty("colorGroup_string")
+        public String colorGroup_string;
+
         @JsonProperty("name_text_en")
         public String nameTextEn;
 
@@ -58,11 +107,17 @@ public class  OspreyApiResponse{
         @JsonProperty("discount_double")
         public double discountDouble;
 
-        @JsonProperty("size_string_mv")
-        public List<String> sizeStringMv;
+//        @JsonProperty("size_string_mv")
+//        public List<String> sizeStringMv;
+
+        @JsonProperty("size_en_string")
+        public String sizeEnString;
 
         @JsonProperty("color_string_mv")
         public List<String> colorStringMv;
+
+        @JsonProperty("tradeDiscountedValue_double")
+        public Double tradeDiscountedValueDouble;
 
         @JsonProperty("url")
         public String url;
@@ -79,21 +134,56 @@ public class  OspreyApiResponse{
         @JsonProperty("l1 category")
         public String l1Category;
 
-        @JsonProperty("l2 category")
-        public String l2Category;
+        @JsonProperty("l1l2category_en_string_mv")
+        public List<String> l1l2categoryEnStringMv;
 
-        @JsonProperty("l3 category")
-        public String l3Category;
+        @JsonProperty("l1l3category_en_string_mv")
+        public List<String> l1l3categoryEnStringMv;
 
         @JsonProperty("availability")
         public boolean availability;
+
+//        @JsonProperty("detail")
+//        public JsonNode detail;
+//
+//        public String getErrorMessage() {
+//            if (detail == null) {
+//                return null;
+//            }
+//            return "{\"detail\": \"" + detail + "\"}";
+//        }
+//
+//        public void setDetail(JsonNode detail) {
+//            this.detail = detail;
+//        }
+//
+//        public JsonNode getDetail() {
+//            return detail;
+//        }
+
+//        public List<String> getBrandNameTextEnMv() {
+//            return brandNameTextEnMv;
+//        }
+
+       public List<String> getSizeEnString() {
+            if (sizeEnString == null || sizeEnString.isEmpty()) {
+        return Collections.emptyList();
+        }
+    // Split the string by comma or any other delimiter that matches your data
+           return Arrays.asList(sizeEnString.split(","));
+        }
+
+        public void setSizeEnString(String sizeEnString) {
+            this.sizeEnString = sizeEnString;
+        }
+
     }
 
     @Getter
     @Setter
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class FacetData {
+    public static class FacetItem {
 
         @JsonProperty("pricerange_inr_string")
         public List<Facet> priceRangeInrString;
@@ -107,14 +197,29 @@ public class  OspreyApiResponse{
         @JsonProperty("discount_string")
         public List<Facet> discountString;
 
-        @JsonProperty("size_string_mv")
-        public List<Facet> sizeStringMv;
+//        @JsonProperty("size_string_mv")
+//        public List<Facet> sizeStringMv;
 
-        @JsonProperty("color_string_mv")
-        public List<Facet> colorStringMv;
+//        @JsonProperty("color_string_mv")
+//        public List<Facet> colorStringMv;
 
-        @JsonProperty("rating_double")
-        public List<Facet> ratingDouble;
+        @JsonProperty("verticalsizegroupformat_en_string_mv")
+        public List<Facet> verticalSizeGroupFormatEnStringMv;
+
+        @JsonProperty("verticalcolorfamily_en_string_mv")
+        public List<Facet> verticalColorFamilyEnStringMv;
+
+        @JsonProperty("rating_string_mv")
+        public List<Facet> ratingStringMv;
+
+        @JsonProperty("genderfilter_en_string_mv")
+        public List<Facet> genderFilterEnStringMv;
+
+        @JsonProperty("occasion_en_string_mv")
+        public List<Facet> occasionEnStringMv;
+
+        @JsonProperty("tags_string_mv")
+        public List<Facet> tagsStringMv;
     }
 
     @Getter
@@ -128,8 +233,135 @@ public class  OspreyApiResponse{
 
         @JsonProperty("value")
         public int value;
+
+        private Map<String, List<FacetItem>> facetData;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Integer getValue() {
+            return value;
+        }
+
+        public void setValue(Integer value) {
+            this.value = value;
+        }
+
+//        private JsonNode detail;  // Change from String to JsonNode
+//
+//        public JsonNode getDetail() {
+//            return detail;
+//        }
+//
+//        public void setDetail(JsonNode detail) {
+//            this.detail = detail;
+//        }
+
+    }
+
+//    public String asString() {
+//        StringBuilder response = new StringBuilder();
+//        if (docs == null || docs.isEmpty()) {
+//            // Handle error response
+//            String errorResponse = response.toString();
+//            if(errorResponse.contains("Invalid store"))
+//                response = new StringBuilder("{\"detail\": \"Invalid store\"}");
+//          //  response.append("{\"detail\": \"Search query cannot be empty or invalid.\"}");
+//        } else {
+//            // Handle success response
+//            response.append(docs.toString());
+//        }
+//        return response.toString();
+//
+//    }
+
+//    public String asString() {
+//        StringBuilder response = new StringBuilder();
+//
+//        if (docs == null || docs.isEmpty()) {
+//            String currentResponse = getCurrentResponse();
+//            if (currentResponse.contains("Invalid store")) {
+//                return "{\"detail\": \"Invalid store\"}";
+//            }
+//            return "{\"detail\": \"Search query cannot be empty or invalid.\"}";
+//        }
+//
+//        // Convert docs list to string
+//        response.append(docs);
+//        return response.toString();
+//    }
+//
+//    private String getCurrentResponse() {
+//        try {
+//            return String.valueOf(docs);
+//        } catch (Exception e) {
+//            return "";
+//        }
+//    }
+
+//    public String asStringForStore() {
+//        StringBuilder response = new StringBuilder();
+//        if (docs == null || docs.isEmpty()) {
+//            // Handle store error response
+//            response.append("{\"detail\": \"Invalid store\"}");
+//        } else {
+//            // Handle success response
+//            response.append(docs.toString());
+//        }
+//        return response.toString();
+//    }
+
+    public String asString(String query,String store) {
+        StringBuilder response = new StringBuilder();
+        if (store == null || store.trim().isEmpty()) {
+            response.append("{\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"store\"], ")
+                    .append("\"msg\": \"Field required\", \"input\": {\"query\": \"")
+                    .append(query != null ? query : "")  // Avoid null query
+                    .append("\", \"sort_field\": \"relevance\", \"records_per_page\": 2}}]}");
+        }
+        // Check for empty or invalid query
+        else if (query == null || query.trim().isEmpty()) {
+            response.append("{\"detail\": \"Search query cannot be empty or invalid.\"}");
+        }
+        // Check for invalid store
+        else if (docs == null || docs.isEmpty()) {
+            response.append("{\"detail\": \"Invalid store\"}");
+        }
+        // Valid case - return the response with documents
+        else {
+            response.append(docs.toString());
+        }
+
+        return response.toString();
+    }
+
+    public static boolean isValidPageNumber(String pageNumber) {
+        return pageNumber == null || pageNumber.matches("\\d+");
+    }
+
+    public static String validatePageNumber(String pageNumber) {
+        if (!isValidPageNumber(pageNumber)) {
+            return "{\"detail\": \"page_number must be an integer\"}";
+        }
+        return null;
     }
 }
+//    @Getter
+//    @Setter
+//    @JsonInclude(JsonInclude.Include.NON_NULL)
+//    public static class PriceInrDouble {
+//
+//        @JsonProperty("price")
+//        public Float price;
+//        @JsonProperty("original_price")
+//        public Float originalPrice;
+//    }
+//}
 //@Getter
 //@Setter
 //@JsonInclude(JsonInclude.Include.NON_EMPTY)

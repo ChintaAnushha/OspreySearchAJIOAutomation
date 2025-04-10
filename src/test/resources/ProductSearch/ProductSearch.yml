@@ -1,0 +1,130 @@
+testDataMap:
+  productSearchValid:
+    urls:
+      searchBaseUrl: https://osprey-sit.services.ajio.com
+      apiEndpoint: /couturesearch/v1/products/search
+      ospreySearchEndpoint: /couturesearch/v1/products/search
+    headersMap:
+      Content-Type: application/json
+      accept: application/json
+    otherParams:
+      expectedStatusCode: 200
+      query: shirts
+      store: rilfnl
+      records_per_page: 12
+#      requestJsonString: "{\"query\":\"Shirt\",\"store\":\"rilfnl\"}"
+#  requestJsonString: "{\"query\":\"Shirt\",\"store\":\"rilfnl\"}"
+#  productSearchInvalid:
+#        urls:
+#          searchBaseUrl: https://osprey-sit.services.ajio.com
+#          apiEndpoint: /couturesearch/v1/products/search
+#          ospreySearchEndpoint: /couturesearch/v1/products/search
+#        headersMap:
+#          Content-Type: application/json
+#          accept: application/json
+#        otherParams:
+#          expectedStatusCode: 200
+#          query: 34j@sdg
+#          store: rilfnl
+#          records_per_page: 1000
+#          requestJsonString: "{\"query\":\"@34jsdg\",\"store\":\"rilfnl\"}"
+#  productSearchEmpty:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\" \",\"store\":\"rilfnl\"}"
+#  productSearchInvalidStore:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"Jeans\",\"store\":\"rilfn\"}"
+#  productSearchNoStore:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"Jeans\"}"
+##  productSearchWithoutVisitorId:
+##    urls:
+##      searchBaseUrl: https://osprey-sit.services.ajio.com
+##      apiEndpoint: /couturesearch/v1/products/search
+##    headersMap:
+##      Content-Type: application/json
+##      accept: application/json
+##    otherParams:
+##      expectedStatusCode: 400
+##      requestJsonString: "{\"query\":\"iphone\",\"jcsVisitorId\":\" \"}"
+#  productSearchMisspelledQuery:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"potao\",\"jcsVisitorId\":\"jcsVisitorId\"}"
+#  productSearchSynonymsQuery:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"refrigerator\",\"jcsVisitorId\":\"jcsVisitorId\"}"
+#  productSearchContextualQuery:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"29*24 inch mousepad\",\"jcsVisitorId\":\"jcsVisitorId\"}"
+#  productSearchVernacularQuery:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"karam\",\"jcsVisitorId\":\"jcsVisitorId\"}"
+#  productSearchBoostQuery:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"android phone\",\"jcsVisitorId\":\"jcsVisitorId\"}"
+#  productSearchBuryQuery:
+#    urls:
+#      searchBaseUrl: https://osprey-sit.services.ajio.com
+#      apiEndpoint: /couturesearch/v1/products/search
+#    headersMap:
+#      Content-Type: application/json
+#      accept: application/json
+#    otherParams:
+#      expectedStatusCode: 200
+#      requestJsonString: "{\"query\":\"imported orange 1kg\",\"jcsVisitorId\":\"jcsVisitorId\"}"

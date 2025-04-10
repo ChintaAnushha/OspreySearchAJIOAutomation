@@ -17,7 +17,7 @@ public class CreateSurveyResponseValidator extends BaseScript {
     public CreateSurveyResponseValidator(CreateSurveyResponseWrapper response, TestData data) {
         this.createSurveyResponseWrapper = response;
         this.testData = data;
-        this.testDataParams = data.getOtherParams();
+     //   this.testDataParams = data.getOtherParams();
     }
 
     public void validateCreatedSurveyResponse(SoftAssert softAssert){

@@ -1,0 +1,1 @@
+{"enableFacetCounts":false,"query":"tops","store":"rilfnl","records_per_page":10000,"sort_field":"price","sort_order":"desc","page_number":1,"disable_facets":false,"enable_facet_values_count":false}

@@ -1,0 +1,21 @@
+Test Summary:
+-------------
+Price Range: 500.00 - 2000.00 INR
+Total Products: 43
+Products in Range: 43
+
+Count Validation:
+----------------
+Products Match Status: MATCHED
+NumFound: 43
+Facet Count: 43
+Docs Count: 43
+Overall Status: PASSED
+
+Price Statistics:
+----------------
+Minimum Price: 500.00 INR
+Maximum Price: 1999.00 INR
+Average Price: 1191.70 INR
+
+Validation Message: All validations passed successfully

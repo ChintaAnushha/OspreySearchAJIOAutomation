@@ -1,0 +1,16 @@
+Test Summary:
+-------------
+Sort Field: price
+Sort Order: desc
+Total Products: 3691
+
+Price Range:
+------------
+Highest Price: 1999.00 INR
+Lowest Price: 149.00 INR
+Price Difference: 1850.00 INR
+
+Validation:
+----------
+Sorting Status: PASSED
+Validation Message: Products are correctly sorted in descending order

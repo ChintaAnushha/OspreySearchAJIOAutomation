@@ -114,6 +114,68 @@ public class MicrositeYamlPathConstants {
 
     public  static final String SEARCH_KEYWORDS_FILEPATH = "src/test/resources/SearchKeywords/Keywordssearch.yml";
     public  static final String SEARCH_KEYWORDS_DATAKEY = "ospreySearch";
+    public  static final String SEARCH_KEYWORDS_VALID_DATAKEY = "productSearchValidQuery";
+    public static final String PRODUCT_SEARCH_INVALID_DATAKEY = "productSearchInvalidQuery";
+    public static final String PRODUCT_SEARCH_EMPTY_DATAKEY = "productSearchEmptyQuery";
+    public static final String PRODUCT_SEARCH_INVALIDSTORE_DATAKEY = "productSearchInvalidStore";
+    public static final String PRODUCT_SEARCH_NOSTORE_DATAKEY = "productSearchNoStore";
+    public static final String PRODUCT_SEARCH_WITH_PRICEASC_DATAKEY = "searchWithPriceAsc";
+    public static final String PRODUCT_SEARCH_WITH_PRICEDESC_DATAKEY = "searchWithPriceDesc";
+    public static final String PRODUCT_SEARCH_WITH_DISABLEDFACET_DATAKEY = "facetDataVerify";
+    public static final String PRODUCT_SEARCH_WITH_ENABLEDFACET_DATAKEY = "facetDataEnableVerify";
+    public static final String PRODUCT_SEARCH_WITH_DISABLEDFACETCOUNT_DATAKEY = "facetDataCountDisable";
+    public static final String PRODUCT_SEARCH_WITH_ENABLEDFACETCOUNT_DATAKEY = "facetDataCountEnable";
+    public static final String PRODUCT_SEARCH_WITH_SPECIFICATTRIBUTE_DATAKEY = "productSearchWithAttributes";
+    public static final String PRODUCT_SEARCH_WITH_STOREREDIRECT_DATAKEY = "storeRedirectSearch";
+    public static final String PRODUCT_SEARCH_WITH_EXCEPTQUERYNOOTHERATTRIBUTE_DATAKEY = "exceptQueryNoOtherAttribute";
+    public static final String PRODUCT_SEARCH_WITH_PAGINATION_DATAKEY = "paginationVerify";
+    public static final String PRODUCT_SEARCH_WITH_INVALIDPAGINATION_DATAKEY = "invalidPageNumber";
+    public static final String PRODUCT_SEARCH_WITH_INVALIDRECORDOFFSET_DATAKEY = "invalidRecordsOffset";
+    public static final String PRODUCT_SEARCH_WITH_RECORDSOFFSET_DATAKEY = "recordsOffsetVerify";
+    public static final String PRODUCT_SEARCH_WITH_RECORDSPERPAGE_DATAKEY = "recordsPerPageVerify";
 
+    // public static final String PRODUCT_SEARCH_WITH_FILTERS_FILEPATH = "src/test/resources/SearchKeywords/SearchWithFilters.yml";
+  //  public static final String PRODUCT_SEARCH_WITH_FILTERS_DATAKEY = "searchWithBrandFilter";
+
+
+    // ***************** PRODUCT_SEARCH_WITHOUT_FILTERS **********************
+
+   // public static final String PRODUCT_SEARCH_FILEPATH = "src/test/resources/ProductSearch/ProductSearch.yml";
+  //  public static final String PRODUCT_SEARCH_DATAKEY = "searchWithBrandFilter";
+ //   public static final String PRODUCT_SEARCH_INVALID_DATAKEY = "productSearchInvalid";
+ //   public static final String PRODUCT_SEARCH_EMPTY_DATAKEY = "productSearchEmpty";
+    public static final String PRODUCT_SEARCH_WITHOUT_VISITOR_ID_DATAKEY = "productSearchWithoutVisitorId";
+    public static final String PRODUCT_SEARCH_MISSPELLED_QUERY_DATAKEY = "productSearchMisspelledQuery";
+    public static final String PRODUCT_SEARCH_SYNONYMS_QUERY_DATAKEY = "productSearchSynonymsQuery";
+    public static final String PRODUCT_SEARCH_CONTEXTUAL_QUERY_DATAKEY = "productSearchContextualQuery";
+    public static final String PRODUCT_SEARCH_VERNACULAR_QUERY_DATAKEY = "productSearchVernacularQuery";
+    public static final String PRODUCT_SEARCH_BOOST_DATAKEY = "productSearchBoostQuery";
+    public static final String PRODUCT_SEARCH_BURY_DATAKEY = "productSearchBuryQuery";
+
+
+
+    // ********************* PRODUCT_SEARCH_WITH_FILTERS **********************
+
+    public static final String PRODUCT_SEARCH_WITH_FILTERS_FILEPATH = "src/test/resources/SearchKeywords/SearchWithFilters.yml";
+    public static final String PRODUCT_SEARCH_WITH_FILTERS_DATAKEY = "searchWithBrandFilter";
+    public static final String PRODUCT_SEARCH_WITH_COLORFILTERS_DATAKEY = "searchWithColorFilter";
+    public static final String PRODUCT_SEARCH_WITH_PRICERANGEFILTERS_DATAKEY = "priceRangeFilterSearch";
+    public static final String PRODUCT_SEARCH_WITH_DISCOUNTFILTERS_DATAKEY = "discountFilterSearch";
+    public static final String PRODUCT_SEARCH_WITH_GENDERFILTERS_DATAKEY = "genderFilterSearch";
+    public static final String PRODUCT_SEARCH_WITH_CATEGORYFILTERS_DATAKEY = "categoryFilterSearch";
+    public static final String PRODUCT_SEARCH_WITH_SIZEFILTERS_DATAKEY = "sizeFilterSearch";
+    public static final String PRODUCT_SEARCH_WITH_MULTIPLEFILTERS_DATAKEY = "multipleFiltersTest";
+    public static final String PRODUCT_SEARCH_WITH_ONEFILTERMULTIPLEVALUES_DATAKEY = "oneFiltersMultipleValues";
+
+
+    public static final String PRODUCT_SEARCH_WITH_CATEGORY_L4_FILTER_DATAKEY = "productSearchWithCategoryL4Filter";
+  //  public static final String PRODUCT_SEARCH_WITH_PRICEASC_FILTER_DATAKEY = "searchWithPriceAsc";
+    public static final String PRODUCT_SEARCH_WITH_DISCOUNT_FILTER_DATAKEY = "productSearchWithDiscountFilter";
+    public static final String PRODUCT_SEARCH_WITH_ONLY_PRICE_FILTER_DATAKEY = "productSearchWithOnlyPriceFilter";
+    public static final String PRODUCT_SEARCH_WITH_ONLY_DISCOUNT_FILTER_DATAKEY = "productSearchWithOnlyDiscountFilter";
+
+    public static final String SIT_HEALTH_FILEPATH = "src/test/resources/SITHealth/SIThealth.yml";
+
+    public static final String SIT_HEALTH_DATAKEY = "SITHealth";
 
 }

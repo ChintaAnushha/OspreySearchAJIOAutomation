@@ -1,0 +1,19 @@
+Overall Status: ✅ RECORDS PER PAGE VALIDATED - PASSED
+
+Summary:
+--------
+Expected Records Per Page: 10
+Actual Documents Returned: 10
+Total Results Found: 349
+
+Detailed Analysis:
+-----------------
+Pagination Validation:
+--------------------
+Expected Records: 10
+Actual Records: 10
+Total Available: 349
+
+First Document Details:
+Name: High women jeans jeggings, black, 38
+Code: 469517191002

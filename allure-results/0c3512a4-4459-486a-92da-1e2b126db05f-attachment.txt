@@ -1,0 +1,1 @@
+{"enableFacetCounts":false,"store":"rilfnl","records_per_page":12,"sort_field":"relevance","disable_facets":false,"enable_facet_values_count":false}

@@ -1,0 +1,4 @@
+Test: OspreyApiServiceWithInValidQuery
+Timestamp: 20250409_110043
+Error: Invalid query test failed: java.net.UnknownHostException: osprey-sit.services.ajio.com: nodename nor servname provided, or not known
+Response: No response available

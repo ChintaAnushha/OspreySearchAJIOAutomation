@@ -1,0 +1,28 @@
+Test Summary:
+-------------
+Status: ✅ PASSED
+
+Response Counts:
+---------------
+NumFound: 79
+Docs Count: 79
+
+Filter Criteria:
+---------------
+Gender Values: [Women]
+Category Value: Women - Jeans & Jeggings
+
+Results:
+--------
+Total Products: 79
+Matching Products: 79
+Match Percentage: 100.00%
+
+Validation Details:
+-----------------
+Gender Match Required: Yes
+Category Match Required: Yes
+Overall Match Status: All products match filters
+
+Mismatched Products:
+------------------

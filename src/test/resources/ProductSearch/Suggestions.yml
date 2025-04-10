@@ -1,0 +1,12 @@
+testDataMap:
+  suggestions:
+    urls:
+      searchBaseUrl: http://34.100.237.59:8083
+      apiEndpoint: /v1/suggestion
+    headersMap:
+      Content-Type: application/json
+    otherParams:
+      expectedStatusCode: 200
+      partnerId: 1
+      userId: user_cooker
+      query: co

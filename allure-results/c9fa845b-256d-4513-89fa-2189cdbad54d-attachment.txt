@@ -1,0 +1,58 @@
+Overall Status: ✅ PAGE NUMBER VALIDATION - PASSED
+
+Summary:
+--------
+Total Results: 98
+Page Number: 2
+Records Per Page: 10
+
+Detailed Analysis:
+-----------------
+Page Validation:
+----------------
+Expected Start Index: 10
+Expected End Index: 20
+Expected Document Count: 10
+Actual Document Count: 10
+
+Document Details:
+Document 1:
+Code: 830140398001
+Name: Abstract Slim Fit Shirt
+----------------
+Document 2:
+Code: 580007625001
+Name: Park women deodorants
+----------------
+Document 3:
+Code: 830103400001
+Name: Abstract Slim Fit Shirttest
+----------------
+Document 4:
+Code: 580007597003
+Name: title upfae
+----------------
+Document 5:
+Code: 580007767005
+Name: Onllaney l/s test caps
+----------------
+Document 6:
+Code: 580007767003
+Name: Onllaney l/s test caps
+----------------
+Document 7:
+Code: 830145620001
+Name: Abstract Slim Fit Shirt for Blue updated
+----------------
+Document 8:
+Code: 830145621001
+Name: Abstract Slim Fit Shirt for Blue updated
+----------------
+Document 9:
+Code: 580012897001
+Name: Spectrum liquid lip matte with hyaluroni
+----------------
+Document 10:
+Code: 510023476006
+Name: test red
+----------------

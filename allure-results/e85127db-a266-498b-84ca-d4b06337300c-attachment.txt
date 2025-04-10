@@ -1,0 +1,24 @@
+Test Summary:
+-------------
+Expected Category: Women - Jeans & Jeggings
+Total Products: 79
+Matching Products: 79
+
+Count Validation:
+----------------
+Exact Match Status: PASSED
+NumFound: 79
+Facet Count: 79
+Docs Count: 79
+Counts Match Status: MATCHED
+Docs Match Status: VALID
+
+Filter Statistics:
+----------------
+Match Percentage: 100.00%
+
+Validation:
+----------
+Filter Compliance: PASSED
+Validation Message: All products match the specified category filter
+Pagination Note: Showing all results

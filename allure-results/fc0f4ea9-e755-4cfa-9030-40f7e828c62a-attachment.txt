@@ -1,0 +1,766 @@
+Overall Status: ✅ ALL FACET VALUES PRESENT - PASSED
+
+Summary Statistics:
+------------------
+Total Facet Values: 150
+Values Present: 150
+Null Values: 0
+Value Presence Percentage: 100.00%
+
+Null Value Details:
+-----------------
+None
+
+Detailed Analysis:
+-----------------
+Facet: brand_string_mv
+Name: adidas
+Value: 2077
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: AJIO
+Value: 1230
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: TRIMAX
+Value: 80
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: RAYMOND
+Value: 77
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: LEVIS
+Value: 17
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: NIKE
+Value: 12
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: Puma
+Value: 8
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: TIME BOOKS
+Value: 8
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: BENSON & HEDGES
+Value: 7
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: EM-DEE'S
+Value: 7
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: AACHI
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: Linen Club
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: PETER ENGLAND
+Value: 5
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: ADIDAS
+	
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: H&M
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: ORANGE
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: WOODLAND
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: Outryt
+Value: 3
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: TIGER
+Value: 3
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: home sizzler
+Value: 3
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: 1 AAROW
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: ANTIQUITY
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: BOMBAY DYEING
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: Catalog Engine
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: Ginger by lifestyle
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: PAPERKRAFT
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: Reebok
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: Zivame
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: ADIDAS
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: BEE TEE
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: CALVIN KLEIN
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: DISNEY PRINCESS
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: High Star
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: MAX
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: frendz-doraemon1
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: home-sizzler1
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: home-sizzler1-1234
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: brand_string_mv
+Name: newbrand1
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: discount_string
+Name: 0-20%
+Value: 2317
+Status: ✓ HAS VALUE
+------------------------
+Facet: discount_string
+Name: 51-80%
+Value: 1232
+Status: ✓ HAS VALUE
+------------------------
+Facet: discount_string
+Name: 81-100%
+Value: 29
+Status: ✓ HAS VALUE
+------------------------
+Facet: discount_string
+Name: 21-30%
+Value: 11
+Status: ✓ HAS VALUE
+------------------------
+Facet: discount_string
+Name: 41-50%
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: discount_string
+Name: 31-40%
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: genderfilter_en_string_mv
+Name: Men
+Value: 3579
+Status: ✓ HAS VALUE
+------------------------
+Facet: genderfilter_en_string_mv
+Name: Boys
+Value: 8
+Status: ✓ HAS VALUE
+------------------------
+Facet: genderfilter_en_string_mv
+Name: Women
+Value: 7
+Status: ✓ HAS VALUE
+------------------------
+Facet: genderfilter_en_string_mv
+Name: Infants
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Men - Shirts
+Value: 3575
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Boys - Shirts
+Value: 8
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Men - Tshirts
+Value: 7
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Women - Shirts
+Value: 7
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Men - Track Pants
+Value: 3
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Infants - Shirts
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Men - Jeans
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Boys - Clothing Accessories
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Men - Cases
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Men - Shirt Pieces
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Men - Suit Pieces
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: l1l3nestedcategory_en_string_mv
+Name: Women - Leggings
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: Casual
+Value: 3460
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: Occasion
+Value: 52
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: Evening
+Value: 45
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: CASUAL
+Value: 17
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: WORK
+Value: 7
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: Work
+Value: 5
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: Active
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: occasion_en_string_mv
+Name: FESTIVAL
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: pricerange_inr_string
+Name: Rs.500-1000
+Value: 1906
+Status: ✓ HAS VALUE
+------------------------
+Facet: pricerange_inr_string
+Name: Below Rs.500
+Value: 1447
+Status: ✓ HAS VALUE
+------------------------
+Facet: pricerange_inr_string
+Name: Rs.1001-1500
+Value: 118
+Status: ✓ HAS VALUE
+------------------------
+Facet: pricerange_inr_string
+Name: Rs.1501-2000
+Value: 67
+Status: ✓ HAS VALUE
+------------------------
+Facet: pricerange_inr_string
+Name: Above Rs.5000
+Value: 39
+Status: ✓ HAS VALUE
+------------------------
+Facet: pricerange_inr_string
+Name: Rs.2501-5000
+Value: 21
+Status: ✓ HAS VALUE
+------------------------
+Facet: pricerange_inr_string
+Name: Rs.2001-2500
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: rating_string_mv
+Name: 1 star & above
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: rating_string_mv
+Name: 2 star & above
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: rating_string_mv
+Name: 3 star & above
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: rating_string_mv
+Name: 4 star & above
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: tags_string_mv
+Name: Bestprice
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: tags_string_mv
+Name: Bestseller
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: tags_string_mv
+Name: Exclusive
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: tags_string_mv
+Name: New
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: tags_string_mv
+Name: Sellingfast
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Brown
+Value: 1720
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Beige
+Value: 123
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Purple
+Value: 54
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Pink
+Value: 52
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Black
+Value: 47
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Green
+Value: 37
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Blue
+Value: 34
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Maroon
+Value: 22
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Bronze
+Value: 10
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: White
+Value: 10
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Copper
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Cream
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Red
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Khaki
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Orange
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Burgundy
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Gold
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Grey
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Multi
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalcolorfamily_en_string_mv
+Name: Olive
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: S
+Value: 1870
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 26
+Value: 1230
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: M
+Value: 237
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: XS
+Value: 176
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: XXS
+Value: 78
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: L
+Value: 76
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: XL
+Value: 56
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 11-12Y
+Value: 52
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 34
+Value: 33
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: XXL
+Value: 20
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 40
+Value: 14
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 36
+Value: 12
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 38
+Value: 12
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 3XL
+Value: 11
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 4XL
+Value: 9
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 42
+Value: 8
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 3-4Y
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 44
+Value: 6
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 12
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 13
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 14
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 15
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 16
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 35
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 37.5
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 39
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 46
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 5XL
+Value: 4
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 2-3Y
+Value: 3
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 48
+Value: 3
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 6
+Value: 3
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 1-2Y
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 39.5
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 5
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 50
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 52
+Value: 2
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 35.5
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 36.5
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 37
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 4-5Y
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 4-6Y
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 5-6Y
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 6-9M
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 6XL
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: 8-9Y
+Value: 1
+Status: ✓ HAS VALUE
+------------------------
+Facet: verticalsizegroupformat_en_string_mv
+Name: FS
+Value: 1
+Status: ✓ HAS VALUE
+------------------------

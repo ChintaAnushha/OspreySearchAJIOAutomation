@@ -24,7 +24,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse getAllSurveysAPI(TestData testData) {
         String getAllSurveysEndpoint = testData.getUrls().get("surveyEndpoint");
-        getAllSurveysEndpoint = getAllSurveysEndpoint+"?offset=" + testData.getOtherParams().get("offset") + "&pageSize=" + testData.getOtherParams().get("pageSize");
+      //  getAllSurveysEndpoint = getAllSurveysEndpoint+"?offset=" + testData.getOtherParams().get("offset") + "&pageSize=" + testData.getOtherParams().get("pageSize");
         System.out.printf("endpoint is::::::"+getAllSurveysEndpoint);
         httpResponse = HttpClientCaller.micrositeAPIGetCall(fqdn, getAllSurveysEndpoint, cookie);
         return httpResponse;
@@ -61,7 +61,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse getAssigneeSurveysAPI(TestData testData) {
         String getAssigneeSurveysEndpoint = testData.getUrls().get("getAssignSurveyEndpoint");
-        getAssigneeSurveysEndpoint = getAssigneeSurveysEndpoint+"?completed=" + testData.getOtherParams().get("completed");
+   //     getAssigneeSurveysEndpoint = getAssigneeSurveysEndpoint+"?completed=" + testData.getOtherParams().get("completed");
         System.out.printf("endpoint is::::::"+getAssigneeSurveysEndpoint);
         httpResponse = HttpClientCaller.micrositeAPIGetCall(fqdn, getAssigneeSurveysEndpoint, cookie);
         return httpResponse;
@@ -76,7 +76,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse getSurveyDashboardDataAPI(TestData testData) {
         String getSurveyDashboardDataEndpoint = testData.getUrls().get("getSurveyDashboardDataEndpoint");
-        getSurveyDashboardDataEndpoint = getSurveyDashboardDataEndpoint+"?pageNumber=" + testData.getOtherParams().get("pageNumber");
+   //     getSurveyDashboardDataEndpoint = getSurveyDashboardDataEndpoint+"?pageNumber=" + testData.getOtherParams().get("pageNumber");
         System.out.printf("endpoint is::::::"+getSurveyDashboardDataEndpoint);
         httpResponse = HttpClientCaller.micrositeAPIGetCall(fqdn, getSurveyDashboardDataEndpoint, cookie);
         return httpResponse;
@@ -118,7 +118,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse getFaq(TestData testData){
         String getFaqEndpoint = testData.getUrls().get("getFaqEndpoint");
-        getFaqEndpoint = getFaqEndpoint+"?offset=" + testData.getOtherParams().get("offset") + "&pageSize=" + testData.getOtherParams().get("pageSize");
+    //    getFaqEndpoint = getFaqEndpoint+"?offset=" + testData.getOtherParams().get("offset") + "&pageSize=" + testData.getOtherParams().get("pageSize");
         httpResponse =HttpClientCaller.micrositeAPIGetCall(fqdn,getFaqEndpoint,cookie);
         return httpResponse;
     }
@@ -146,7 +146,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse searchJourney(TestData testData,String searchKey){
         String getSearchJourneyEndpoint = testData.getUrls().get("GetSearchJourneysEndpoint");
-        getSearchJourneyEndpoint=getSearchJourneyEndpoint+"?key="+ searchKey+"&page="+testData.getOtherParams().get("page")+"&size="+testData.getOtherParams().get("size");
+     //   getSearchJourneyEndpoint=getSearchJourneyEndpoint+"?key="+ searchKey+"&page="+testData.getOtherParams().get("page")+"&size="+testData.getOtherParams().get("size");
         httpResponse = HttpClientCaller.micrositeAPIGetCall(fqdn,getSearchJourneyEndpoint,cookie);
         return httpResponse;
     }
@@ -195,7 +195,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse searchProgram(TestData testData, String searchKey){
         String searchProgramEndpoint = testData.getUrls().get("searchProgramEndpoint");
-        searchProgramEndpoint = searchProgramEndpoint+"?key="+searchKey + "&page=" + testData.getOtherParams().get("page") + "&size=" + testData.getOtherParams().get("size");
+    //    searchProgramEndpoint = searchProgramEndpoint+"?key="+searchKey + "&page=" + testData.getOtherParams().get("page") + "&size=" + testData.getOtherParams().get("size");
         httpResponse = HttpClientCaller.micrositeAPIGetCall(fqdn,searchProgramEndpoint,cookie);
         return httpResponse;
     }
@@ -220,7 +220,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse searchCourse(TestData testData,String searchText){
         String searchCourseEndpoint = testData.getUrls().get("searchCourseEndpoint");
-        searchCourseEndpoint = searchCourseEndpoint+"?key="+searchText + "&page="+testData.getOtherParams().get("page")+ "&size=" + testData.getOtherParams().get("size");
+     //   searchCourseEndpoint = searchCourseEndpoint+"?key="+searchText + "&page="+testData.getOtherParams().get("page")+ "&size=" + testData.getOtherParams().get("size");
         httpResponse = HttpClientCaller.micrositeAPIGetCall(fqdn,searchCourseEndpoint,cookie);
         return httpResponse;
     }
@@ -255,7 +255,7 @@ public class ApiUrls extends BaseScript {
 
     public HttpResponse getNewEmployeeDownloads(TestData testData){
         String getNewEmployeeDownloadsEndpoint = testData.getUrls().get("getNewEmployeeDownloadsEndpoint");
-        getNewEmployeeDownloadsEndpoint = getNewEmployeeDownloadsEndpoint+"?offset="+testData.getOtherParams().get("offset")+ "&size=" + testData.getOtherParams().get("size");
+   //     getNewEmployeeDownloadsEndpoint = getNewEmployeeDownloadsEndpoint+"?offset="+testData.getOtherParams().get("offset")+ "&size=" + testData.getOtherParams().get("size");
         httpResponse = HttpClientCaller.micrositeAPIGetCall(fqdn,getNewEmployeeDownloadsEndpoint,cookie);
         return httpResponse;
     }

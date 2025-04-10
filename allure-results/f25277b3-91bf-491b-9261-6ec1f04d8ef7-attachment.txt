@@ -1,0 +1,4 @@
+Current Test Metrics:
+Passed: 12
+Failed: 3
+Skipped: 7
