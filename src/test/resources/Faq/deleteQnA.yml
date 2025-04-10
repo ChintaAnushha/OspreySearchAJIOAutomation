@@ -1,9 +1,0 @@
-testDataMap:
-  deleteFaq:
-    urls:
-      deleteFaqEndpoint: /microsite/faq/delete-qna/23
-    headersMap:
-      Content-Type: application/json
-    otherParams:
-      expectedStatusCode: 200
-      categoryList: 1,3

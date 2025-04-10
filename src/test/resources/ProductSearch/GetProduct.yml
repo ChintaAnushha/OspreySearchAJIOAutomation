@@ -1,9 +1,0 @@
-testDataMap:
-  getProduct:
-    urls:
-      searchBaseUrl: https://retail.googleapis.com
-      apiEndpoint: /v2/projects/514172091440/locations/global/catalogs/default_catalog/branches/0/products/
-    headersMap:
-      Content-Type: application/json
-    otherParams:
-      expectedStatusCode: 200

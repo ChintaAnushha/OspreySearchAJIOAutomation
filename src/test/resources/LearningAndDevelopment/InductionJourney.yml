@@ -1,8 +1,0 @@
-testDataMap:
-  inductionJourney:
-    urls:
-      InductionJourneyEndpoint: /microsite/lnd/journeys/induction
-    headersMap:
-      Content-Type: application/json
-    otherParams:
-      expectedStatusCode: 200

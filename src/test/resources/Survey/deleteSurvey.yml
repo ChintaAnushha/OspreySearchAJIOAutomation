@@ -1,8 +1,0 @@
-testDataMap:
-  deleteSurvey:
-    urls:
-      deleteSurveyEndpoint: /microsite/surveys/DeleteSurvey
-    headersMap:
-      Content-Type: application/json
-    otherParams:
-      expectedStatusCode: 200
