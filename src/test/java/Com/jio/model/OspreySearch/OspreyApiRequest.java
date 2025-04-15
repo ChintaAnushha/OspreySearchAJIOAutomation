@@ -17,8 +17,11 @@ import java.util.stream.Collectors;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class OspreyApiRequest {
 
+//    @JsonProperty("query")
+//    public String query;
+
     @JsonProperty("query")
-    public String query;
+    public Object query;
 
     @JsonProperty("store")
     public String store;
@@ -136,6 +139,10 @@ public class OspreyApiRequest {
         } catch (NumberFormatException e) {
             this.recordsOffset = value;
         }
+    }
+
+    public void setQuery(Object query) {
+        this.query = query;
     }
 
     public Object getRecordsOffset() {

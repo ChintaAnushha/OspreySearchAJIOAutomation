@@ -263,6 +263,30 @@ testDataMap:
         page_number: 1
         records_per_page: 10
         sort_field: relevance
+    invalidDataTypeVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: 111
+        store: rilfnl
+        page_number: 1
+        sort_field: relevance
+    invalidBooleanDataTypeVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: true
+        store: rilfnl
+        page_number: 1
+        sort_field: relevance
 
 
 

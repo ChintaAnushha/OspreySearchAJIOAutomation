@@ -951,6 +951,118 @@ public class OspreyApiService extends BaseScript{
         }
     }
 
+    @Step("Verify Osprey API response when query parameter is invalid type")
+    @Description("This test validates the API behavior when query parameter is a number instead of string. Expected: Error response with 422 status code.")
+    public void ospreyAPIWithInvalidQueryType() {
+        try {
+            softAssert = new SoftAssert();
+            Allure.step("Loading test data", () -> {
+                this.testData = getYMLData(MicrositeYamlPathConstants.SEARCH_KEYWORDS_FILEPATH,
+                        MicrositeYamlPathConstants.PRODUCT_SEARCH_WITH_INVALIDDATATYPE_DATAKEY);
+            });
+
+            Map<String, String> testDataParams = testData.getOtherParams();
+            ospreyAPIRequest = new OspreyApiRequest();
+
+            int queryValue = Integer.parseInt(testDataParams.get("query")); // Extracting Query
+            String store = testDataParams.get("store"); // Extracting Store
+
+            // Set request parameters
+            Allure.step("Setting request parameters", () -> {
+                ospreyAPIRequest.setQuery(testDataParams.get(queryValue));
+                ospreyAPIRequest.setStore(testDataParams.get("store"));
+             //   ospreyAPIRequest.setRecordsperpage(Integer.parseInt(testDataParams.get("records_per_page")));
+            });
+
+            // Execute request
+            ospreyApiRequestString = objectMapper.writeValueAsString(ospreyAPIRequest);
+            System.out.println("Search request body: " + ospreyApiRequestString);
+            Allure.attachment("Request Body", ospreyApiRequestString);
+
+            Allure.step("Executing API request", () -> {
+                executeRequestAndGetResponse(softAssert, ospreyApiRequestString);
+            });
+
+            Allure.step("Validating response", () -> {
+                ospreyAPIResponseValidator = new OspreyAPIResponseValidator(ospreyApiResponse, testData);
+                ospreyAPIResponseValidator.validateInvalidQueryTypeResponse(queryValue,store);
+            });
+
+            Allure.attachment("Response Body", ospreyApiResponse.toString());
+
+            softAssert.assertAll();
+        } catch (Exception ex) {
+            Allure.step("Test failed: " + ex.getMessage(), Status.FAILED);
+            Assert.fail("Invalid query type test failed: " + ex.getMessage());
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Step("Verify Osprey API response when query parameter is invalid boolean type")
+    @Description("This test validates the API behavior when query parameter is a boolean or boolean instead of string. Expected: Error response with 422 status code.")
+    public void ospreyAPIWithInvalidBooleanQueryType() {
+        try {
+            softAssert = new SoftAssert();
+            Allure.step("Loading test data", () -> {
+                this.testData = getYMLData(MicrositeYamlPathConstants.SEARCH_KEYWORDS_FILEPATH,
+                        MicrositeYamlPathConstants.PRODUCT_SEARCH_WITH_INVALIDBOOLEANDATATYPE_DATAKEY);
+            });
+
+            Map<String, String> testDataParams = testData.getOtherParams();
+            ospreyAPIRequest = new OspreyApiRequest();
+
+            String queryFromData = testDataParams.get("query");
+            Boolean queryValue = Boolean.valueOf(queryFromData);
+           // Object queryValue;
+
+//            // Handle different data types
+//            if (queryFromData.equalsIgnoreCase("true") || queryFromData.equalsIgnoreCase("false")) {
+//                queryValue = Boolean.valueOf(queryFromData);
+//               // queryValue = Boolean.parseBoolean(queryFromData);  // This will convert "true" to true
+//            } else {
+//               // try {
+//                    queryValue = Integer.parseInt(queryFromData);
+//              //  } catch (NumberFormatException e) {
+//                    queryValue = queryFromData;
+//                }
+           // }
+
+            String store = testDataParams.get("store");
+
+            // Set request parameters
+          //  Object finalQueryValue = queryValue;
+          //  Object finalQueryValue = queryValue;
+            Allure.step("Setting request parameters", () -> {
+                ospreyAPIRequest.setQuery(queryValue);
+                ospreyAPIRequest.setStore(store);
+                //ospreyAPIRequest.setRecordsperpage(Integer.parseInt(testDataParams.get("records_per_page")));
+            });
+
+            // Execute request
+            ospreyApiRequestString = objectMapper.writeValueAsString(ospreyAPIRequest);
+            System.out.println("Search request body: " + ospreyApiRequestString);
+            Allure.attachment("Request Body", ospreyApiRequestString);
+
+            Allure.step("Executing API request", () -> {
+                executeRequestAndGetResponse(softAssert, ospreyApiRequestString);
+            });
+
+            Allure.step("Validating response", () -> {
+                ospreyAPIResponseValidator = new OspreyAPIResponseValidator(ospreyApiResponse, testData);
+                ospreyAPIResponseValidator.validateInvalidBooleanQueryTypeResponse(queryValue, store);
+            });
+
+            Allure.attachment("Response Body", ospreyApiResponse.toString());
+
+            softAssert.assertAll();
+        } catch (Exception ex) {
+            Allure.step("Test failed: " + ex.getMessage(), Status.FAILED);
+            Assert.fail("Invalid query type test failed: " + ex.getMessage());
+            throw new RuntimeException(ex);
+        }
+    }
+
+
     public void createRequest(SoftAssert softAssert) {
         Map<String, String> testDataParams = testData.getOtherParams();
         ospreyAPIRequest =new OspreyApiRequest();

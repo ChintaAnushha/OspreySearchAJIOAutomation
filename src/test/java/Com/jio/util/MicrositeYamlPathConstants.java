@@ -133,6 +133,11 @@ public class MicrositeYamlPathConstants {
     public static final String PRODUCT_SEARCH_WITH_INVALIDRECORDOFFSET_DATAKEY = "invalidRecordsOffset";
     public static final String PRODUCT_SEARCH_WITH_RECORDSOFFSET_DATAKEY = "recordsOffsetVerify";
     public static final String PRODUCT_SEARCH_WITH_RECORDSPERPAGE_DATAKEY = "recordsPerPageVerify";
+    public static final String PRODUCT_SEARCH_WITH_INVALIDDATATYPE_DATAKEY = "invalidDataTypeVerify";
+    public static final String PRODUCT_SEARCH_WITH_INVALIDBOOLEANDATATYPE_DATAKEY = "invalidBooleanDataTypeVerify";
+
+
+
 
     // public static final String PRODUCT_SEARCH_WITH_FILTERS_FILEPATH = "src/test/resources/SearchKeywords/SearchWithFilters.yml";
   //  public static final String PRODUCT_SEARCH_WITH_FILTERS_DATAKEY = "searchWithBrandFilter";

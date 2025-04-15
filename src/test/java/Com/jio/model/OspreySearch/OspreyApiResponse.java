@@ -316,15 +316,48 @@ public class  OspreyApiResponse {
 //        return response.toString();
 //    }
 
-    public String asString(String query,String store) {
+//    public String asString(String query,String store) {
+//        StringBuilder response = new StringBuilder();
+//        if (store == null || store.trim().isEmpty()) {
+//            response.append("{\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"store\"], ")
+//                    .append("\"msg\": \"Field required\", \"input\": {\"query\": \"")
+//                    .append(query != null ? query : "")  // Avoid null query
+//                    .append("\", \"sort_field\": \"relevance\", \"records_per_page\": 2}}]}");
+//        }
+//        // Check for empty or invalid query
+//        else if (query == null || query.trim().isEmpty()) {
+//            response.append("{\"detail\": \"Search query cannot be empty or invalid.\"}");
+//        }
+//        // Check for invalid store
+//        else if (docs == null || docs.isEmpty()) {
+//            response.append("{\"detail\": \"Invalid store\"}");
+//        }
+//        // Valid case - return the response with documents
+//        else {
+//            response.append(docs.toString());
+//        }
+//
+//        return response.toString();
+//    }
+
+    public String asString(String query, String store) {
         StringBuilder response = new StringBuilder();
-        if (store == null || store.trim().isEmpty()) {
+
+        // Check for invalid query type (when query is a number)
+        if (query != null && query.matches("\\d+")) {
+            response.append("{\"detail\": [{\"type\": \"string_type\", \"loc\": [\"body\", \"query\"], ")
+                    .append("\"msg\": \"Input should be a valid string\", \"input\": ")
+                    .append(query)
+                    .append("}]}");
+        }
+        // Check for missing store
+        else if (store == null || store.trim().isEmpty()) {
             response.append("{\"detail\": [{\"type\": \"missing\", \"loc\": [\"body\", \"store\"], ")
                     .append("\"msg\": \"Field required\", \"input\": {\"query\": \"")
-                    .append(query != null ? query : "")  // Avoid null query
+                    .append(query != null ? query : "")
                     .append("\", \"sort_field\": \"relevance\", \"records_per_page\": 2}}]}");
         }
-        // Check for empty or invalid query
+        // Check for empty query
         else if (query == null || query.trim().isEmpty()) {
             response.append("{\"detail\": \"Search query cannot be empty or invalid.\"}");
         }
@@ -332,13 +365,29 @@ public class  OspreyApiResponse {
         else if (docs == null || docs.isEmpty()) {
             response.append("{\"detail\": \"Invalid store\"}");
         }
-        // Valid case - return the response with documents
+        // Valid case
         else {
             response.append(docs.toString());
         }
 
         return response.toString();
     }
+
+    public String handleBooleanResponse(Boolean query, String store) {
+        StringBuilder response = new StringBuilder();
+
+        // Check for invalid query type (when query is boolean)
+        if (query != null) {
+            response.append("{\"detail\": [{\"type\": \"string_type\", \"loc\": [\"body\", \"query\"], ")
+                    .append("\"msg\": \"Input should be a valid string\", \"input\": ")
+                    .append(query)
+                    .append("}]}");
+        } else {
+            response.append(docs.toString());
+        }
+        return response.toString();
+    }
+
 
     public static boolean isValidPageNumber(String pageNumber) {
         return pageNumber == null || pageNumber.matches("\\d+");

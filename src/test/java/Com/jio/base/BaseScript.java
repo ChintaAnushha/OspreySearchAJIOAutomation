@@ -17,6 +17,8 @@ import org.jfree.chart.title.LegendTitle;
 import org.jfree.chart.title.TextTitle;
 import org.jfree.chart.ui.RectangleEdge;
 import org.jfree.data.general.DefaultPieDataset;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
@@ -382,6 +384,13 @@ public class BaseScript {
     @Attachment(value = "Pie Chart - Matched vs Unmatched", type = "image/png")
     public byte[] attachPieChart(byte[] chartBytes) {
         return chartBytes;
+    }
+
+    @AfterMethod
+    public void tearDown(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            Allure.addAttachment("Failure Details", result.getThrowable().getMessage());
+        }
     }
 }
 

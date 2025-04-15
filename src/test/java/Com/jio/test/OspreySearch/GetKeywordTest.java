@@ -5,9 +5,12 @@ import Com.jio.base.BaseScript;
 import io.qameta.allure.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import Com.jio.test.OspreySearch.categories.TestCategories.PassedTests;
+import Com.jio.test.OspreySearch.categories.TestCategories.FailedTests;
 
     @Epic("Osprey Search API")
     @Feature("Product Search Operations")
+    @Owner("Anusha")
     public class GetKeywordTest extends BaseScript {
         OspreyApiService ospreyApiService ;//= new OspreyApiService();
 
@@ -190,6 +193,24 @@ import org.testng.annotations.Test;
         public void OspreyApiServiceWithRecordsPerPage() {
             Allure.step("Executing search with custom records per page value");
             ospreyApiService.ospreyAPIRecordsPerPage();
+        }
+
+        @Test(priority = 20)
+        @Story("Results Configuration")
+        @Description("Verify search results when specific number of records per page is requested")
+        @Severity(SeverityLevel.NORMAL)
+        public void OspreyApiServiceWithQueryInvalidDataType() {
+            Allure.step("Executing search with invalid datatype as query ");
+            ospreyApiService.ospreyAPIWithInvalidQueryType();
+        }
+
+        @Test(priority = 21)
+        @Story("Results Configuration")
+        @Description("Verify search results when specific number of records per page is requested")
+        @Severity(SeverityLevel.NORMAL)
+        public void OspreyApiServiceWithBooleanQueryInvalidDataType() {
+            Allure.step("Executing search with invalid datatype as query ");
+            ospreyApiService.ospreyAPIWithInvalidBooleanQueryType();
         }
 
     }

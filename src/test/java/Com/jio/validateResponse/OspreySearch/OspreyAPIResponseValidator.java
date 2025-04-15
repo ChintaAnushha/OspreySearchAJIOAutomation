@@ -1502,7 +1502,63 @@ public class OspreyAPIResponseValidator extends BaseScript {
         log.info("=================== Records Per Page Validation Completed ===================");
     }
 
+    @Step("Validate invalid query type error response")
+    public void validateInvalidQueryTypeResponse(Object query,String store) {
+        String responseStr = ospreyApiResponse.asString(query.toString(),store);
+        String expectedError = "{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"query\"],\"msg\":\"Input should be a valid string\",\"input\":111}]}";
 
+        softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+                expectedError.replaceAll("\\s+", ""),
+                "Error message should match exactly for invalid query type");
+
+        softAssert.assertTrue(responseStr.contains("Input should be a valid string"),
+                "Response should contain invalid string message");
+        softAssert.assertTrue(responseStr.contains("string_type"),
+                "Response should contain string_type type");
+        softAssert.assertTrue(responseStr.contains("body"),
+                "Response should contain body location");
+        softAssert.assertTrue(responseStr.contains("query"),
+                "Response should contain query location");
+
+        log.info("Invalid query type response: " + responseStr);
+        Allure.addAttachment("Error Response", responseStr);
+
+        softAssert.assertAll();
+    }
+
+    @Step("Validate invalid query type error response")
+    public void validateInvalidBooleanQueryTypeResponse(boolean query,String store) {
+       // String responseStr = ospreyApiResponse.asString(query.toString(), store);
+        String responseStr = ospreyApiResponse.handleBooleanResponse(query,store);
+
+        String expectedError = "{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"query\"],\"msg\":\"Input should be a valid string\",\"input\":true}]}";
+
+        // Determine expected error based on query type
+//        if (query instanceof Boolean) {
+//            expectedError = String.format("{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"query\"],\"msg\":\"Input should be a valid string\",\"input\":%s}]}", query);
+//        } else {
+//            expectedError = String.format("{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"query\"],\"msg\":\"Input should be a valid string\",\"input\":%d}]}", query);
+//        }
+
+        softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+                expectedError.replaceAll("\\s+", ""),
+                "Error message should match exactly for invalid query type");
+
+        // Common validations
+        softAssert.assertTrue(responseStr.contains("Input should be a valid string"),
+                "Response should contain invalid string message");
+        softAssert.assertTrue(responseStr.contains("string_type"),
+                "Response should contain string_type type");
+        softAssert.assertTrue(responseStr.contains("body"),
+                "Response should contain body location");
+        softAssert.assertTrue(responseStr.contains("query"),
+                "Response should contain query location");
+
+        log.info("Invalid query type response: " + responseStr);
+        Allure.addAttachment("Error Response", responseStr);
+
+        softAssert.assertAll();
+    }
 
     private double getMinPrice(List<OspreyApiResponse.Doc> products) {
         return products.stream()
