@@ -373,6 +373,72 @@ public class  OspreyApiResponse {
         return response.toString();
     }
 
+    public String asFilterString(String filters, String store) {
+        StringBuilder response = new StringBuilder();
+
+//        // Check for invalid filter type (when filters is empty string)
+//        if (filters != null && filters.trim().isEmpty() || filters.matches("\\d+")) {
+//            response.append("{\"detail\": [{\"type\": \"list_type\", \"loc\": [\"body\", \"filters\"], ")
+//                    .append("\"msg\": \"Input should be a valid list\", \"input\": \"")
+//                    .append(filters)
+//                    .append("\"}]}");
+//        }
+        // Check for invalid filter type
+//        if (filters != null) {
+//            response.append("{\"detail\": [{\"type\": \"list_type\", \"loc\": [\"body\", \"filters\"], ")
+//                    .append("\"msg\": \"Input should be a valid list\", \"input\": ");
+//            try {
+//                // Handle numeric value without quotes
+//                if (filters.matches("\\d+")) {
+//                    response.append(Integer.parseInt(filters));  // Append as number without quotes
+//                } else if (filters.equalsIgnoreCase("true") || filters.equalsIgnoreCase("false")) {
+//                    response.append(Boolean.parseBoolean(filters));  // Boolean without quotes
+//                } else {
+//                    response.append("\"").append(filters).append("\"");  // Add quotes for non-numeric
+//                }
+//            } catch (Exception e) {
+//                // If any parsing error occurs, treat as string
+//                response.append("\"").append(filters).append("\"");
+//            }
+//
+//            response.append("}]}");
+//        }
+        if (filters != null) {
+            response.append("{\"detail\": [{")
+                    .append("\"type\": \"list_type\", ")
+                    .append("\"loc\": [\"body\", \"filters\"], ")
+                    .append("\"msg\": \"Input should be a valid list\", ")
+                    .append("\"input\": ");
+
+            if (filters.equalsIgnoreCase("true")) {
+                response.append("true");
+            } else if (filters.equalsIgnoreCase("false")) {
+                response.append("false");
+            } else if (filters.matches("^[0-9]+$")) {
+                response.append(filters);
+            } else {
+                response.append("\"").append(filters).append("\"");
+            }
+
+            response.append("}]}");
+        }
+
+        // Check for missing store
+        else if (store == null || store.trim().isEmpty()) {
+            response.append("{\"detail\": \"Invalid store\"}");
+        }
+        // Check for invalid store
+        else if (docs == null || docs.isEmpty()) {
+            response.append("{\"detail\": \"Invalid store\"}");
+        }
+        // Valid case
+        else {
+            response.append(docs.toString());
+        }
+
+        return response.toString();
+    }
+
     public String handleBooleanResponse(Boolean query, String store) {
         StringBuilder response = new StringBuilder();
 
@@ -388,6 +454,23 @@ public class  OspreyApiResponse {
         return response.toString();
     }
 
+    public String handleBooleanFilterResponse(Boolean filter, String store) {
+        StringBuilder response = new StringBuilder();
+
+        if (filter != null) {
+            response.append("{\"detail\": [{")
+                    .append("\"type\": \"list_type\", ")
+                    .append("\"loc\": [\"body\", \"filters\"], ")
+                    .append("\"msg\": \"Input should be a valid list\", ")
+                    .append("\"input\": ")
+                    .append(filter)
+                    .append("}]}");
+        } else {
+            response.append(docs.toString());
+        }
+
+        return response.toString();
+    }
 
     public static boolean isValidPageNumber(String pageNumber) {
         return pageNumber == null || pageNumber.matches("\\d+");
@@ -398,6 +481,18 @@ public class  OspreyApiResponse {
             return "{\"detail\": \"page_number must be an integer\"}";
         }
         return null;
+    }
+
+    public String asStringBooleanPageNumber(Boolean pageNumber, String store) {
+        StringBuilder response = new StringBuilder();
+
+        if (pageNumber != null) {
+            response.append("{\"detail\": \"page_number must be an integer greater than 0, boolean values are not allowed\"}");
+        } else {
+            response.append(docs.toString());
+        }
+
+        return response.toString();
     }
 }
 //    @Getter

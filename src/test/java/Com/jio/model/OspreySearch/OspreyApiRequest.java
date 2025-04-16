@@ -1,8 +1,10 @@
 package Com.jio.model.OspreySearch;
 
+//import Com.jio.test.OspreySearch.EmptyFilterSerializer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.Getter;
 import lombok.Setter;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,6 +37,7 @@ public class OspreyApiRequest {
 //    @JsonProperty("filters")
 //    public List<Filter> filters;
 
+  //  @JsonSerialize(using = EmptyFilterSerializer.class)
     @JsonProperty("filters")
     public List<Filter> filters;
 

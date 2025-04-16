@@ -135,6 +135,8 @@ public class MicrositeYamlPathConstants {
     public static final String PRODUCT_SEARCH_WITH_RECORDSPERPAGE_DATAKEY = "recordsPerPageVerify";
     public static final String PRODUCT_SEARCH_WITH_INVALIDDATATYPE_DATAKEY = "invalidDataTypeVerify";
     public static final String PRODUCT_SEARCH_WITH_INVALIDBOOLEANDATATYPE_DATAKEY = "invalidBooleanDataTypeVerify";
+    public static final String PRODUCT_SEARCH_WITH_INVALIDBOOLEANPAGEDATATYPE_DATAKEY = "invalidBooleanPageDataTypeVerify";
+
 
 
 
@@ -171,6 +173,10 @@ public class MicrositeYamlPathConstants {
     public static final String PRODUCT_SEARCH_WITH_SIZEFILTERS_DATAKEY = "sizeFilterSearch";
     public static final String PRODUCT_SEARCH_WITH_MULTIPLEFILTERS_DATAKEY = "multipleFiltersTest";
     public static final String PRODUCT_SEARCH_WITH_ONEFILTERMULTIPLEVALUES_DATAKEY = "oneFiltersMultipleValues";
+    public static final String PRODUCT_SEARCH_WITH_EMPTYFILTERS_DATAKEY = "emptyFiltersVerify";
+    public static final String PRODUCT_SEARCH_WITH_INVALIDBOOLEANDATA_DATAKEY = "invalidBooleanFilterDataTypeVerify";
+
+
 
 
     public static final String PRODUCT_SEARCH_WITH_CATEGORY_L4_FILTER_DATAKEY = "productSearchWithCategoryL4Filter";

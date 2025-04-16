@@ -213,20 +213,15 @@ import Com.jio.test.OspreySearch.categories.TestCategories.FailedTests;
             ospreyApiService.ospreyAPIWithInvalidBooleanQueryType();
         }
 
+        @Test(priority = 22)
+        @Story("Pagination")
+        @Description("Verify API behavior with invalid page number")
+        @Severity(SeverityLevel.NORMAL)
+        public void OspreyApiServiceWithBooleanInValidPageNumber() {
+            Allure.step("Executing search with invalid page number");
+            ospreyApiService.ospreyAPIBooleanPageNumber();
+        }
+
     }
 
-//
-//    @Test(priority =1)
-//    public void addFaqWithInvalidCategory() {
-//        addFaqService.addFaqWithInvalidCategory();
-//    }
-//
-//    @Test(priority =2)
-//    public void addFaqWithoutQuestion() {
-//        addFaqService.addFaqWithoutQuestion();
-//    }
-//
-//    @Test(priority =3)
-//    public void addFaqWithoutAnswer() {
-//        addFaqService.addFaqWithoutAnswer();
-//    }
+

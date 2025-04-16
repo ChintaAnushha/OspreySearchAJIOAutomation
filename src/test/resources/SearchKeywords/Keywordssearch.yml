@@ -287,6 +287,18 @@ testDataMap:
         store: rilfnl
         page_number: 1
         sort_field: relevance
+    invalidBooleanPageDataTypeVerify:
+      urls:
+        ospreySearchEndpoint: /couturesearch/v1/products/search
+      headersMap:
+        Content-Type: application/json
+        accept: application/json
+      otherParams:
+        expectedStatusCode: 422
+        query: jeans
+        store: rilfnl
+        page_number: true
+        sort_field: relevance
 
 
 

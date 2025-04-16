@@ -53,5 +53,17 @@ public class SearchWithFiltersTest extends BaseScript{
     public void OspreyApiServiceSearchWithOneFilterMultipleValues() {
         ospreyApiServiceFilters.productSearchWithOneFilterMultipleValues();
     }
+
+    @Test(priority = 9)
+    public void OspreyApiServiceSearchWithEmptyFilters() {
+        ospreyApiServiceFilters.ospreyAPIWithEmptyFilterListType();
+    }
+
+    @Test(priority = 10)
+    public void OspreyApiServiceSearchWithBooleanAsFilter() {
+        ospreyApiServiceFilters.ospreyAPIWithBooleanFilterValue();
+    }
+
+
 }
 

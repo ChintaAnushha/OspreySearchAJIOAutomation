@@ -1560,6 +1560,71 @@ public class OspreyAPIResponseValidator extends BaseScript {
         softAssert.assertAll();
     }
 
+    @Step("Validating Boolean Page Number Error")
+    public void validateBooleanPageNumberError(boolean pageNumber,String store) {
+        log.info("=================== Boolean Page Number Error Validation Started ===================");
+
+        try {
+            Boolean booleanPageNumber = Boolean.valueOf(testData.getOtherParams().get("page_number"));
+            String responseStr = ospreyApiResponse.asStringBooleanPageNumber(pageNumber, store);
+            String expectedError = "{\"detail\": \"page_number must be an integer greater than 0, boolean values are not allowed\"}";
+
+            log.info("\nError Response Analysis:");
+            log.info("======================");
+            log.info("Page Number: " + booleanPageNumber);
+            log.info("Error Message: " + responseStr);
+
+            // Validate error message
+            boolean isValidError = expectedError.replaceAll("\\s+", "")
+                    .equals(responseStr.replaceAll("\\s+", ""));
+
+            StringBuilder errorAnalysis = new StringBuilder();
+            errorAnalysis.append(String.format(
+                    "Error Validation:\n" +
+                            "-----------------\n" +
+                            "Error Message Match: %s\n" +
+                            "Expected: %s\n" +
+                            "Actual: %s\n",
+                    isValidError ? "✓" : "✗",
+                    expectedError,
+                    responseStr
+            ));
+
+            // Perform assertion
+            softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+                    expectedError.replaceAll("\\s+", ""),
+                    "Error message should match exactly for boolean page number");
+
+            String overallStatus = isValidError ?
+                    "✅ BOOLEAN PAGE NUMBER ERROR VALIDATED - PASSED" :
+                    "❌ BOOLEAN PAGE NUMBER ERROR VALIDATION - FAILED";
+
+            // Add to Allure report
+            Allure.addAttachment("Boolean Page Number Error Validation", String.format(
+                    "Overall Status: %s\n\n" +
+                            "Error Details:\n" +
+                            "-------------\n" +
+                            "Expected Error: %s\n" +
+                            "Actual Error: %s\n\n" +
+                            "Detailed Analysis:\n" +
+                            "-----------------\n%s",
+                    overallStatus,
+                    expectedError,
+                    responseStr,
+                    errorAnalysis.toString()
+            ));
+
+        } catch (Exception e) {
+            log.error("Boolean page number error validation failed: " + e.getMessage());
+            Allure.addAttachment("Validation Error", e.getMessage());
+            Assert.fail("Error validation failed: " + e.getMessage());
+        }
+
+        log.info("=================== Boolean Page Number Error Validation Completed ===================");
+    }
+
+
+
     private double getMinPrice(List<OspreyApiResponse.Doc> products) {
         return products.stream()
                 .mapToDouble(OspreyApiResponse.Doc::getPriceInrDouble)

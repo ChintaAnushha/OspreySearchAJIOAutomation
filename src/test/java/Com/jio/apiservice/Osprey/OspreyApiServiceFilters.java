@@ -2,6 +2,7 @@ package Com.jio.apiservice.Osprey;
 
 import Com.jio.model.OspreySearch.OspreyApiResponse;
 import Com.jio.validateResponse.OspreySearch.OspreyAPIFiltersResponseValidator;
+import Com.jio.validateResponse.OspreySearch.OspreyAPIResponseValidator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,9 +11,12 @@ import Com.jio.base.BaseScript;
 import Com.jio.model.OspreySearch.OspreyApiRequest;
 import Com.jio.model.survey.global.TestData;
 import Com.jio.util.MicrositeYamlPathConstants;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
+import io.qameta.allure.model.Status;
 import io.qameta.allure.testng.AllureTestNg;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
@@ -338,33 +342,11 @@ public class OspreyApiServiceFilters extends BaseScript {
             ospreyAPIRequest.setSortfield(testDataParams.get("sort_field"));
             ospreyAPIRequest.setSortOrder(testDataParams.get("sort_order"));
 
-//            // Set filters
-//            List<Object> filterObjects = new ArrayList<>(filters);
-//           // ospreyAPIRequest.setFilters(filterObjects);
-//
-//            List<OspreyApiRequest.Filter> filters = new ArrayList<>();
+           // Set filters
 
             List<OspreyApiRequest.Filter> filters = new ArrayList<>();
             OspreyApiRequest.Filter filter = new OspreyApiRequest.Filter();
-//            filter.setField("your_field");
-//            filter.setValues(Arrays.asList("value1", "value2"));
-//            filter.setOperator("your_operator");
-//            filters.add(filter);
-
             ospreyAPIRequest.setFilters(filters);
-//            // Gender filter
-//            Map<String, Object> genderFilter = new HashMap<>();
-//            genderFilter.put("fieldName", testDataParams.get("gender_field_name"));
-//            genderFilter.put("values", Arrays.asList(testDataParams.get("gender_values").split(",")));
-//            filters.add((OspreyApiRequest.Filter) genderFilter);
-//
-//            // Category filter
-//            Map<String, Object> categoryFilter = new HashMap<>();
-//            categoryFilter.put("fieldName", testDataParams.get("category_field_name"));
-//            categoryFilter.put("values", Collections.singletonList(testDataParams.get("category_value")));
-//            filters.add((OspreyApiRequest.Filter) categoryFilter);
-//
-//            ospreyAPIRequest.setFilters(Collections.singletonList(filters));
 
             // Gender filter
             OspreyApiRequest.Filter genderFilter = new OspreyApiRequest.Filter();
@@ -444,7 +426,148 @@ public class OspreyApiServiceFilters extends BaseScript {
     }
 
 
+    @Description("Verify Osprey API response when filters parameter is invalid type")
+    public void ospreyAPIWithEmptyFilterListType() {
+        try {
+            softAssert = new SoftAssert();
+            Allure.step("Loading test data", () -> {
+                this.testData = getYMLData(MicrositeYamlPathConstants.PRODUCT_SEARCH_WITH_FILTERS_FILEPATH,
+                        MicrositeYamlPathConstants.PRODUCT_SEARCH_WITH_EMPTYFILTERS_DATAKEY);
+            });
 
+            Map<String, String> testDataParams = testData.getOtherParams();
+            ospreyAPIRequest = new OspreyApiRequest();
+            ObjectMapper objectMapper = new ObjectMapper();
+           ObjectNode rootNode = objectMapper.createObjectNode();
+
+            // Convert empty string to empty list
+          //  String filterStr = testDataParams.get("filters");
+            List<OspreyApiRequest.Filter> filters = new ArrayList<>();
+          //  String filters = testDataParams.get("filters");
+//            if (filterStr != null && filterStr.trim().isEmpty()) {
+//                ospreyAPIRequest.setFilters(filters);
+//            }
+            String store = testDataParams.get("store");
+
+            Allure.step("Setting request parameters", () -> {
+                ospreyAPIRequest.setQuery(testDataParams.get("query"));
+                ospreyAPIRequest.setStore(testDataParams.get("store"));
+                ospreyAPIRequest.setFilters(filters);
+            });
+
+
+//            // Custom serialization to handle filters as "" instead of []
+//            ObjectNode requestNode = objectMapper.valueToTree(ospreyAPIRequest);
+//            if (filterStr != null && filterStr.trim().isEmpty()) {
+//                requestNode.put("filters", "");  // Set as empty string
+//            }
+
+          //  ospreyApiRequestString = objectMapper.writeValueAsString(ospreyAPIRequest);
+
+//// Mandatory fields from test data
+//            rootNode.put("query", testDataParams.get("query"));
+//            rootNode.put("store", testDataParams.get("store"));
+//
+//// Handle filters dynamically based on test data
+            String filterStr = testDataParams.get("filters");
+            String invalidNumericFilter = testDataParams.get("filters");
+            if (filterStr != null) {
+                if (filterStr.trim().isEmpty()) {
+                    // Case: filters = "" in YAML -> we want filters: ""
+                    rootNode.put("filters", "");
+                } else if (filterStr.equals(invalidNumericFilter) || filterStr.matches("\\d+")) {
+                    rootNode.put("filters", Integer.parseInt(filterStr));
+                } else if (filterStr.trim().startsWith("[")) {
+                    // Case: filters = [some list] as JSON string in YAML -> parse it
+                    try {
+                        JsonNode filterArray = objectMapper.readTree(filterStr);
+                        rootNode.set("filters", filterArray);
+                    } catch (Exception e) {
+                        throw new RuntimeException("Invalid filter list JSON: " + filterStr);
+                    }
+                } else {
+                    // Case: fallback to string value
+                    rootNode.put("filters", filterStr);
+                }
+            }
+
+// Convert to JSON string for request
+           ospreyApiRequestString = objectMapper.writeValueAsString(rootNode);
+            System.out.println("Search request body: " + ospreyApiRequestString);
+            Allure.attachment("Request Body", ospreyApiRequestString);
+
+            Allure.step("Executing API request", () -> {
+                executeRequestAndGetResponse(softAssert, ospreyApiRequestString);
+            });
+
+            Allure.step("Validating response", () -> {
+                ospreyAPIFiltersResponseValidator = new OspreyAPIFiltersResponseValidator(ospreyApiResponse, testData);
+                ospreyAPIFiltersResponseValidator.validateInvalidFilterListTypeResponse(filterStr, store);
+            });
+
+            softAssert.assertAll();
+        } catch (Exception ex) {
+            Allure.step("Test failed: " + ex.getMessage(), Status.FAILED);
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Description("Verify Osprey")
+    public void ospreyAPIWithBooleanFilterValue(){
+        try {
+            softAssert = new SoftAssert();
+            Allure.step("Loading test data", () -> {
+                this.testData = getYMLData(MicrositeYamlPathConstants.PRODUCT_SEARCH_WITH_FILTERS_FILEPATH,
+                        MicrositeYamlPathConstants.PRODUCT_SEARCH_WITH_INVALIDBOOLEANDATA_DATAKEY);
+            });
+
+            Map<String, String> testDataParams = testData.getOtherParams();
+            ospreyAPIRequest = new OspreyApiRequest();
+
+            ospreyAPIRequest.setQuery(testDataParams.get("query"));
+            String filterFromData = testDataParams.get("filters");
+            Boolean filterValue = Boolean.valueOf(filterFromData);
+
+            String store = testDataParams.get("store");
+
+            // Set request parameters
+            Allure.step("Setting request parameters", () -> {
+
+                ospreyAPIRequest.setStore(store);
+                //ospreyAPIRequest.setRecordsperpage(Integer.parseInt(testDataParams.get("records_per_page")));
+            });
+
+            // Create ObjectMapper and root node for custom JSON
+            ObjectMapper objectMapper = new ObjectMapper();
+            ObjectNode rootNode = objectMapper.createObjectNode();
+
+            rootNode.put("filters", filterValue);  // This will set as actual boolean
+
+            // Execute request
+         //   ospreyApiRequestString = objectMapper.writeValueAsString(ospreyAPIRequest);
+            // Convert to request string
+            ospreyApiRequestString = objectMapper.writeValueAsString(rootNode);
+            System.out.println("Search request body: " + ospreyApiRequestString);
+            Allure.attachment("Request Body", ospreyApiRequestString);
+
+            Allure.step("Executing API request", () -> {
+                executeRequestAndGetResponse(softAssert, ospreyApiRequestString);
+            });
+
+            Allure.step("Validating response", () -> {
+                ospreyAPIFiltersResponseValidator = new OspreyAPIFiltersResponseValidator(ospreyApiResponse, testData);
+                ospreyAPIFiltersResponseValidator.validateInvalidBooleanFilterTypeResponse(filterValue, store);
+            });
+
+            Allure.attachment("Response Body", ospreyApiResponse.toString());
+
+            softAssert.assertAll();
+        } catch (Exception ex) {
+            Allure.step("Test failed: " + ex.getMessage(), Status.FAILED);
+            Assert.fail("Invalid query type test failed: " + ex.getMessage());
+            throw new RuntimeException(ex);
+        }
+    }
 
 
     public void createRequest(SoftAssert softAssert) {

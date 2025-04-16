@@ -13,6 +13,7 @@ import Com.jio.model.survey.global.TestData;
 import Com.jio.util.ExcelReader;
 import Com.jio.util.ObjectMapperWrapper;
 import Com.jio.util.MicrositeYamlPathConstants;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
@@ -1058,6 +1059,60 @@ public class OspreyApiService extends BaseScript{
         } catch (Exception ex) {
             Allure.step("Test failed: " + ex.getMessage(), Status.FAILED);
             Assert.fail("Invalid query type test failed: " + ex.getMessage());
+            throw new RuntimeException(ex);
+        }
+    }
+
+    @Step("Verify Osprey API response when page number is invalid boolean type")
+    @Description("Verify Osprey API response when page_number is boolean or boolean instead of string. Expected: Error response with 422 status code.")
+    public void ospreyAPIBooleanPageNumber() {
+        try {
+            softAssert = new SoftAssert();
+            Allure.step("Loading test data", () -> {
+                this.testData = getYMLData(MicrositeYamlPathConstants.SEARCH_KEYWORDS_FILEPATH,
+                        MicrositeYamlPathConstants.PRODUCT_SEARCH_WITH_INVALIDBOOLEANPAGEDATATYPE_DATAKEY);
+            });
+
+            Map<String, String> testDataParams = testData.getOtherParams();
+            ospreyAPIRequest = new OspreyApiRequest();
+
+            ospreyAPIRequest.setQuery(testDataParams.get("query"));
+            String pageNumberFromData = testDataParams.get("page_number");
+            Boolean pageNumberValue = Boolean.valueOf(pageNumberFromData);
+
+            String store = testDataParams.get("store");
+
+            // Set request parameters
+            Allure.step("Setting request parameters", () -> {
+                ospreyAPIRequest.setStore(store);
+            });
+
+            // Create ObjectMapper and root node for custom JSON
+            ObjectMapper objectMapper = new ObjectMapper();
+            ObjectNode rootNode = objectMapper.createObjectNode();
+
+            rootNode.put("page_number", pageNumberValue);  // Set as actual boolean
+
+            // Convert to request string
+            ospreyApiRequestString = objectMapper.writeValueAsString(rootNode);
+            System.out.println("Search request body: " + ospreyApiRequestString);
+            Allure.attachment("Request Body", ospreyApiRequestString);
+
+            Allure.step("Executing API request", () -> {
+                executeRequestAndGetResponse(softAssert, ospreyApiRequestString);
+            });
+
+            Allure.step("Validating response", () -> {
+                ospreyAPIResponseValidator = new OspreyAPIResponseValidator(ospreyApiResponse, testData);
+                ospreyAPIResponseValidator.validateBooleanPageNumberError(pageNumberValue, store);
+            });
+
+            Allure.attachment("Response Body", ospreyApiResponse.toString());
+
+            softAssert.assertAll();
+        } catch (Exception ex) {
+            Allure.step("Test failed: " + ex.getMessage(), Status.FAILED);
+            Assert.fail("Boolean page number test failed: " + ex.getMessage());
             throw new RuntimeException(ex);
         }
     }

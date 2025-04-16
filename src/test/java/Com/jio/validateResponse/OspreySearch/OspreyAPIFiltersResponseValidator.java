@@ -2060,6 +2060,96 @@ public class OspreyAPIFiltersResponseValidator extends BaseScript {
             log.info("=================== Gender Filter Validation Completed ===================");
         }
 
+    @Step("Validate invalid filter list type error response")
+    public void validateInvalidFilterListTypeResponse(String filters,String store) {
+        String responseStr = ospreyApiResponse.asFilterString(filters,store);
+        String testDataFilter = testData.getOtherParams().get("filters");
+       // String expectedError;
+//        String expectedError = "{\"detail\":[{\"type\":\"list_type\",\"loc\":[\"body\",\"filters\"],\"msg\":\"Input should be a valid list\",\"input\":\"\"}]}";
+//
+//        softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+//                expectedError.replaceAll("\\s+", ""),
+//                "Error message should match exactly for invalid filter list type");
+//        String expectedEmptyError = "{\"detail\":[{\"type\":\"list_type\",\"loc\":[\"body\",\"filters\"],\"msg\":\"Input should be a valid list\",\"input\":\"\"}]}";
+//        String expectedNumericError = "{\"detail\":[{\"type\":\"list_type\",\"loc\":[\"body\",\"filters\"],\"msg\":\"Input should be a valid list\",\"input\":" + testData.getOtherParams().get("filters") + "}]}";
+
+        // Validate based on input type from testData
+//        if (testDataFilter.equals(testData.getOtherParams().get("filters"))) {
+//            softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+//                    expectedEmptyError.replaceAll("\\s+", ""),
+//                    "Error message should match exactly for empty filter input");
+//        } else if (filters.equals(testData.getOtherParams().get("filters"))) {
+//            softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+//                    expectedNumericError.replaceAll("\\s+", ""),
+//                    "Error message should match exactly for numeric filter input");
+//        }
+          String expectedError;
+        if (testDataFilter.matches("\\d+")) {
+            expectedError = "{\"detail\":[{\"type\":\"list_type\",\"loc\":[\"body\",\"filters\"],\"msg\":\"Input should be a valid list\",\"input\":" + testDataFilter + "}]}";
+        } else {
+            expectedError = "{\"detail\":[{\"type\":\"list_type\",\"loc\":[\"body\",\"filters\"],\"msg\":\"Input should be a valid list\",\"input\":\"\"}]}";
+        }
+
+        // Validate response matches expected error
+        softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+                expectedError.replaceAll("\\s+", ""),
+                "Error message should match exactly for filter input");
+
+        softAssert.assertTrue(responseStr.contains("Input should be a valid list"),
+                "Response should contain invalid list message");
+        softAssert.assertTrue(responseStr.contains("list_type"),
+                "Response should contain list_type type");
+        softAssert.assertTrue(responseStr.contains("body"),
+                "Response should contain body location");
+        softAssert.assertTrue(responseStr.contains("filters"),
+                "Response should contain filters location");
+
+        log.info("Invalid filter list type response: " + responseStr);
+        Allure.addAttachment("Error Response", responseStr);
+
+        softAssert.assertAll();
+    }
+
+    @Step("Validate invalid query type error response")
+    public void validateInvalidBooleanFilterTypeResponse(boolean filter,String store) {
+        // String responseStr = ospreyApiResponse.asString(query.toString(), store);
+        String responseStr = ospreyApiResponse.handleBooleanFilterResponse(filter,store);
+
+      //  String expectedError =  "{\"detail\":[{" + "\"type\":\"list_type\"," + "\"loc\":[\"body\",\"filters\"]," + "\"msg\":\"Input should be a valid list\"," + "\"input\":%s}]}",filter);
+        String expectedError = String.format("{\"detail\":[{" +
+                "\"type\":\"list_type\"," +
+                "\"loc\":[\"body\",\"filters\"]," +
+                "\"msg\":\"Input should be a valid list\"," +
+                "\"input\":%s" +
+                "}]}", filter);
+        // Determine expected error based on query type
+//        if (query instanceof Boolean) {
+//            expectedError = String.format("{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"query\"],\"msg\":\"Input should be a valid string\",\"input\":%s}]}", query);
+//        } else {
+//            expectedError = String.format("{\"detail\":[{\"type\":\"string_type\",\"loc\":[\"body\",\"query\"],\"msg\":\"Input should be a valid string\",\"input\":%d}]}", query);
+//        }
+
+        softAssert.assertEquals(responseStr.replaceAll("\\s+", ""),
+                expectedError.replaceAll("\\s+", ""),
+                "Error message should match exactly for invalid query type");
+
+        // Common validations
+        softAssert.assertTrue(responseStr.contains("Input should be a valid list"),
+                "Response should contain invalid list message");
+        softAssert.assertTrue(responseStr.contains("list_type"),
+                "Response should contain list_type type");
+        softAssert.assertTrue(responseStr.contains("body"),
+                "Response should contain body location");
+        softAssert.assertTrue(responseStr.contains("filters"),
+                "Response should contain filters location");
+
+        log.info("Invalid filter list type response: " + responseStr);
+        Allure.addAttachment("Error Response", responseStr);
+
+        softAssert.assertAll();
+    }
+
+
 
     private boolean hasOtherGenders(String productGender, String[] allGenders, String currentGender) {
         for (String gender : allGenders) {
